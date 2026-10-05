@@ -12,5 +12,33 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "publicaciones.html",
+    "href": "publicaciones.html",
+    "title": "Publicaciones",
+    "section": "",
+    "text": "Contenido en construcción."
+  },
+  {
+    "objectID": "experiencia.html",
+    "href": "experiencia.html",
+    "title": "Experiencia",
+    "section": "",
+    "text": "Contenido en construcción."
+  },
+  {
+    "objectID": "contacto.html",
+    "href": "contacto.html",
+    "title": "Contacto",
+    "section": "",
+    "text": "Contenido en construcción."
+  },
+  {
+    "objectID": "proyectos.html",
+    "href": "proyectos.html",
+    "title": "Proyectos",
+    "section": "",
+    "text": "Contenido en construcción."
   }
 ]
