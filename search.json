@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "publicaciones.html",
+    "href": "publicaciones.html",
+    "title": "Publicaciones",
+    "section": "",
+    "text": "Contenido en construcción."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "website",
@@ -7,10 +14,31 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
+    "objectID": "contacto.html",
+    "href": "contacto.html",
+    "title": "Contacto",
+    "section": "",
+    "text": "Contenido en construcción."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "experiencia.html",
+    "href": "experiencia.html",
+    "title": "Experiencia",
+    "section": "",
+    "text": "Contenido en construcción."
+  },
+  {
+    "objectID": "proyectos.html",
+    "href": "proyectos.html",
+    "title": "Proyectos",
+    "section": "",
+    "text": "Contenido en construcción."
   }
 ]
