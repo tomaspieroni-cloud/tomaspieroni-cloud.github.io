@@ -7,6 +7,111 @@
     "text": "Contenido en construcción."
   },
   {
+    "objectID": "proyectos/tfm-informalidad-laboral.html",
+    "href": "proyectos/tfm-informalidad-laboral.html",
+    "title": "Informalidad laboral en Argentina",
+    "section": "",
+    "text": "Proyecto insignia · Trabajo Fin de Máster · Universidad de Granada\nPython Pandas Scikit-learn prince FAMD K-Means ABM"
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#resumen-ejecutivo",
+    "href": "proyectos/tfm-informalidad-laboral.html#resumen-ejecutivo",
+    "title": "Informalidad laboral en Argentina",
+    "section": "Resumen ejecutivo",
+    "text": "Resumen ejecutivo\nEste proyecto analiza la informalidad laboral en Argentina como un fenómeno dinámico y heterogéneo. Integré más de 759.000 registros procedentes de 16 bases trimestrales de la Encuesta Permanente de Hogares y construí un flujo reproducible para estudiar transiciones entre situaciones laborales, identificar perfiles diferenciados de vulnerabilidad y explorar su evolución mediante simulación.\nEl trabajo combina análisis descriptivo y longitudinal, reducción de dimensionalidad con FAMD, clustering K-Means, construcción del Índice de Vulnerabilidad Laboral Relativa y un modelo basado en agentes calibrado empíricamente. El objetivo no es anticipar resultados individuales, sino comprender estructuras, transiciones y mecanismos asociados con la informalidad laboral."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#el-problema",
+    "href": "proyectos/tfm-informalidad-laboral.html#el-problema",
+    "title": "Informalidad laboral en Argentina",
+    "section": "El problema",
+    "text": "El problema\nLa informalidad laboral no constituye una situación uniforme ni necesariamente permanente. Las personas pueden transitar entre empleo formal, empleo informal, desempleo e inactividad, mientras que sus condiciones laborales dependen de múltiples dimensiones sociales, ocupacionales y económicas.\nAnalizar únicamente la proporción de trabajadores informales permite describir la magnitud del fenómeno, pero no explica cómo se producen las transiciones ni qué perfiles presentan una mayor vulnerabilidad relativa. El desafío consistió en integrar esas dimensiones dentro de un marco analítico coherente y reproducible."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#los-datos",
+    "href": "proyectos/tfm-informalidad-laboral.html#los-datos",
+    "title": "Informalidad laboral en Argentina",
+    "section": "Los datos",
+    "text": "Los datos\nEl proyecto utiliza microdatos de la Encuesta Permanente de Hogares de Argentina.\nLa base analítica se construyó mediante:\n\nIntegración de más de 759.000 registros.\nProcesamiento de 16 bases trimestrales.\nHomogeneización de variables y categorías.\nClasificación de situaciones de formalidad laboral.\nConstrucción de observaciones longitudinales.\nValidación de consistencia entre periodos.\nPreparación de variables sociales, laborales y ocupacionales.\n\nLa estructura longitudinal permitió observar cambios de situación laboral y construir matrices de transición utilizadas posteriormente en la simulación."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#qué-hice-específicamente",
+    "href": "proyectos/tfm-informalidad-laboral.html#qué-hice-específicamente",
+    "title": "Informalidad laboral en Argentina",
+    "section": "Qué hice específicamente",
+    "text": "Qué hice específicamente\nDiseñé e implementé el pipeline completo del proyecto:\n\nIntegración, limpieza y validación de los microdatos de la EPH.\nClasificación de las situaciones de formalidad laboral.\nConstrucción del panel longitudinal.\nAnálisis descriptivo de las transiciones laborales.\nAplicación de FAMD para sintetizar información mixta, numérica y categórica.\nSegmentación de perfiles mediante clustering K-Means.\nConstrucción del Índice de Vulnerabilidad Laboral Relativa.\nEstimación y calibración de matrices de transición.\nDesarrollo de un modelo basado en agentes.\nSimulación de escenarios y análisis de los mecanismos emergentes.\n\nEl trabajo fue desarrollado principalmente en Python mediante Pandas, Scikit-learn y prince, utilizando Jupyter y Google Colab como entornos de análisis."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#la-decisión-metodológica-más-importante",
+    "href": "proyectos/tfm-informalidad-laboral.html#la-decisión-metodológica-más-importante",
+    "title": "Informalidad laboral en Argentina",
+    "section": "La decisión metodológica más importante",
+    "text": "La decisión metodológica más importante\nLa principal decisión fue no tratar la informalidad como una etiqueta aislada ni reducir el proyecto a una clasificación individual. El análisis se organizó en tres niveles complementarios:\n\nTransiciones laborales\nEl componente longitudinal permitió estudiar cambios entre distintas situaciones laborales y superar una lectura exclusivamente transversal.\n\n\nSegmentación multivariante\nLa combinación de FAMD y K-Means permitió identificar perfiles laborales a partir de múltiples características sin imponer previamente categorías de vulnerabilidad.\n\n\nSimulación calibrada empíricamente\nLos resultados del análisis de segmentación y las matrices de transición se utilizaron para calibrar el modelo basado en agentes. De esta manera, la simulación quedó vinculada con patrones observados en los microdatos, en lugar de depender exclusivamente de supuestos teóricos."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#el-índice-de-vulnerabilidad-laboral-relativa",
+    "href": "proyectos/tfm-informalidad-laboral.html#el-índice-de-vulnerabilidad-laboral-relativa",
+    "title": "Informalidad laboral en Argentina",
+    "section": "El Índice de Vulnerabilidad Laboral Relativa",
+    "text": "El Índice de Vulnerabilidad Laboral Relativa\nEl IVLR sintetiza distintas dimensiones asociadas con la posición laboral de los perfiles identificados. Su carácter es relativo: permite comparar niveles de vulnerabilidad dentro de la estructura analizada, no establecer una medida universal ni permanente de vulnerabilidad individual.\nEl índice funciona como un puente entre:\n\nla estructura multivariante de los datos;\nlos perfiles obtenidos mediante clustering;\nlas transiciones laborales observadas;\nla calibración de los agentes;\ny el análisis de escenarios."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#el-modelo-basado-en-agentes",
+    "href": "proyectos/tfm-informalidad-laboral.html#el-modelo-basado-en-agentes",
+    "title": "Informalidad laboral en Argentina",
+    "section": "El modelo basado en agentes",
+    "text": "El modelo basado en agentes\nEl ABM representa una población de agentes con perfiles laborales calibrados a partir de los resultados empíricos. Los agentes pueden cambiar de situación siguiendo mecanismos y probabilidades derivados del análisis de transiciones.\nLa simulación permite explorar cómo determinadas modificaciones en las condiciones del sistema pueden alterar:\n\nla composición de los perfiles laborales;\nla movilidad entre situaciones;\nla persistencia de condiciones vulnerables;\ny los patrones agregados de informalidad.\n\nLos escenarios no deben interpretarse como pronósticos. Funcionan como experimentos analíticos para estudiar mecanismos y posibles dinámicas bajo distintos supuestos."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#el-resultado",
+    "href": "proyectos/tfm-informalidad-laboral.html#el-resultado",
+    "title": "Informalidad laboral en Argentina",
+    "section": "El resultado",
+    "text": "El resultado\nEl resultado es un sistema analítico reproducible que conecta microdatos laborales, análisis longitudinal, segmentación multivariante, construcción de indicadores y simulación social.\nEl proyecto permite:\n\ndescribir transiciones entre situaciones laborales;\nidentificar perfiles diferenciados de vulnerabilidad;\nsintetizar esas diferencias mediante el IVLR;\ncalibrar agentes con evidencia empírica;\nexplorar escenarios mediante simulación;\ny analizar los mecanismos que generan determinados resultados agregados.\n\nAdemás de sus resultados sustantivos, el proyecto demuestra capacidad para trabajar con microdatos de gran escala, integrar técnicas estadísticas y computacionales, documentar decisiones metodológicas y comunicar con claridad los límites de cada componente."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#pipeline-analítico",
+    "href": "proyectos/tfm-informalidad-laboral.html#pipeline-analítico",
+    "title": "Informalidad laboral en Argentina",
+    "section": "Pipeline analítico",
+    "text": "Pipeline analítico\nDatos EPH → clasificación de formalidad → panel longitudinal → análisis de transiciones → FAMD → clustering K-Means → IVLR → matrices de transición → ABM → simulación de escenarios → análisis de mecanismos"
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#limitaciones-e-interpretación-responsable",
+    "href": "proyectos/tfm-informalidad-laboral.html#limitaciones-e-interpretación-responsable",
+    "title": "Informalidad laboral en Argentina",
+    "section": "Limitaciones e interpretación responsable",
+    "text": "Limitaciones e interpretación responsable\nLos resultados deben interpretarse teniendo en cuenta las siguientes consideraciones:\n\nLos perfiles dependen de las variables y periodos incluidos.\nEl clustering identifica estructuras relativas dentro de los datos analizados.\nEl IVLR permite comparaciones internas y no representa una medida universal.\nLas matrices de transición sintetizan patrones observados en periodos concretos.\nEl ABM simplifica procesos laborales y económicos más amplios.\nLos escenarios simulados permiten explorar mecanismos, pero no constituyen pronósticos.\nLos resultados agregados no deben utilizarse para determinar el futuro laboral de personas concretas."
+  },
+  {
+    "objectID": "proyectos/tfm-informalidad-laboral.html#habilidades-demostradas",
+    "href": "proyectos/tfm-informalidad-laboral.html#habilidades-demostradas",
+    "title": "Informalidad laboral en Argentina",
+    "section": "Habilidades demostradas",
+    "text": "Habilidades demostradas\n\nProcesamiento y validación de microdatos de gran escala.\nAnálisis longitudinal de transiciones laborales.\nEstadística multivariante con datos mixtos.\nAprendizaje no supervisado.\nConstrucción e interpretación de índices compuestos.\nCalibración empírica de modelos computacionales.\nSimulación basada en agentes.\nDiseño de pipelines reproducibles.\nInterpretación metodológica y comunicación de limitaciones.\n\n../proyectos.qmd{.btn .btn-outline-primary}"
+  },
+  {
+    "objectID": "experiencia.html",
+    "href": "experiencia.html",
+    "title": "Experiencia",
+    "section": "",
+    "text": "Contenido en construcción."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "contacto.html",
+    "href": "contacto.html",
+    "title": "Contacto",
+    "section": "",
+    "text": "Contenido en construcción."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Tomás Nelio Pieroni",
@@ -77,31 +182,31 @@
     "text": "Texto y redes\nNLTK, Gensim, análisis de sentimiento, modelado de tópicos y redes semánticas."
   },
   {
-    "objectID": "contacto.html",
-    "href": "contacto.html",
-    "title": "Contacto",
-    "section": "",
-    "text": "Contenido en construcción."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "experiencia.html",
-    "href": "experiencia.html",
-    "title": "Experiencia",
-    "section": "",
-    "text": "Contenido en construcción."
-  },
-  {
     "objectID": "proyectos.html",
     "href": "proyectos.html",
     "title": "Proyectos",
     "section": "",
-    "text": "Contenido en construcción."
+    "text": "Esta selección reúne proyectos en los que combino análisis estadístico, comprensión del contexto, construcción de herramientas y comunicación de resultados."
+  },
+  {
+    "objectID": "proyectos.html#proyectos-destacados",
+    "href": "proyectos.html#proyectos-destacados",
+    "title": "Proyectos",
+    "section": "Proyectos destacados",
+    "text": "Proyectos destacados\n\nInformalidad laboral en Argentina: transiciones, segmentación y simulación\nAnálisis descriptivo y longitudinal de trayectorias laborales mediante microdatos de la Encuesta Permanente de Hogares.\nIntegré y validé más de 759.000 registros procedentes de 16 bases trimestrales. El proyecto combina análisis de transiciones laborales, FAMD, clustering K-Means, construcción del Índice de Vulnerabilidad Laboral Relativa y un modelo basado en agentes calibrado empíricamente para explorar escenarios y analizar mecanismos.\nHerramientas y métodos: Python FAMD K-Means IVLR Simulación basada en agentes"
+  },
+  {
+    "objectID": "proyectos.html#ver-proyecto",
+    "href": "proyectos.html#ver-proyecto",
+    "title": "Proyectos",
+    "section": "Ver proyecto",
+    "text": "Ver proyecto\n\nSistema de Análisis Demográfico Municipal\nUna solución de datos de extremo a extremo para apoyar el análisis demográfico del Ayuntamiento de Montilla.\nDesarrollo de un flujo ETL en R desde APIs públicas del INE, almacenamiento histórico en PostgreSQL, arquitectura en Docker y dashboard interactivo en Shiny.\nHerramientas y métodos: R Shiny PostgreSQL ETL APIs Docker\nPágina completa en preparación.\n\n\n\nDos idiomas, dos conversaciones sobre inteligencia artificial\nNLP y redes semánticas para comparar los discursos sobre IA generativa en español e inglés.\nAnálisis de 6.804 comentarios mediante detección de idioma, sentimiento léxico, modelado de tópicos con LDA y redes semánticas de coocurrencia.\nHerramientas y métodos: NLP multilingüe LDA Gensim AFINN Redes semánticas\nPágina completa en preparación.\n\n\n\nEl pulso mensual del mercado hipotecario español\nUna aplicación interactiva para explorar la evolución territorial y estacional de los préstamos hipotecarios.\nAplicación desarrollada con Streamlit, Pandas y Plotly para comparar comunidades autónomas e identificar patrones mensuales.\nHerramientas y métodos: Streamlit Pandas Plotly Series temporales\nPágina completa y demo interactiva en preparación."
+  },
+  {
+    "objectID": "proyectos.html#otros-análisis",
+    "href": "proyectos.html#otros-análisis",
+    "title": "Proyectos",
+    "section": "Otros análisis",
+    "text": "Otros análisis\n\nPolarización y negatividad en el discurso político digital\nEstudio metodológico sobre tópicos, polaridad y polarización en 6.677 comentarios de YouTube. Se presentará como análisis agregado del discurso digital, con una sección específica sobre alcance y limitaciones.\nPágina completa en preparación."
   }
 ]
