@@ -1,7 +1,82 @@
 ---
-title: "website"
+title: "Tomás Nelio Pieroni"
+page-layout: full
+toc: false
+title-block-banner: false
 ---
 
-This is a Quarto website.
+## Data Analyst | Social Data Scientist
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Transformo datos sociales y organizacionales en indicadores, modelos analíticos y herramientas que ayudan a comprender problemas complejos y tomar decisiones fundamentadas.
+
+**Python · R · SQL · Power BI · Machine Learning · NLP · Visualización de datos**
+
+Sociólogo y Máster en Ciencia de Datos Aplicada a las Ciencias Sociales. Ocho años de experiencia en producción estadística pública. Residente en Granada, ciudadano de la Unión Europea y abierto a oportunidades en España y remoto.
+
+proyectos.qmd{.btn .btn-primary}
+about.qmd{.btn .btn-outline-primary}
+contacto.qmd{.btn .btn-outline-secondary}
+
+---
+
+# Proyectos destacados
+
+## Informalidad laboral en Argentina: transiciones, segmentación y simulación
+
+**Análisis descriptivo y longitudinal de trayectorias laborales mediante microdatos de la Encuesta Permanente de Hogares.**
+
+Integré y validé más de 759.000 registros procedentes de 16 bases trimestrales. El proyecto combina análisis de transiciones laborales, FAMD, clustering K-Means, construcción del Índice de Vulnerabilidad Laboral Relativa y un modelo basado en agentes calibrado empíricamente para explorar escenarios y analizar mecanismos.
+
+**Herramientas y métodos:** `Python` `FAMD` `K-Means` `IVLR` `Simulación basada en agentes`
+
+---
+
+## Datos demográficos convertidos en una herramienta municipal
+
+**Una solución de datos de extremo a extremo para apoyar el análisis demográfico del Ayuntamiento de Montilla.**
+
+Desarrollé un flujo ETL en R desde APIs públicas del INE, organicé las series históricas en PostgreSQL y desplegué la arquitectura mediante Docker. El resultado fue un dashboard interactivo en Shiny acompañado por documentación técnica, diccionario de datos y manual de usuario.
+
+**Herramientas y métodos:** `R` `Shiny` `PostgreSQL` `ETL` `APIs` `Docker`
+
+---
+
+## Dos idiomas, dos conversaciones sobre inteligencia artificial
+
+**NLP y redes semánticas para comparar los discursos sobre IA generativa en español e inglés.**
+
+Analicé 6.804 comentarios de YouTube mediante detección de idioma, análisis de sentimiento léxico, modelado de tópicos con LDA y redes semánticas de coocurrencia. Los resultados muestran un debate centrado en empleo y aprendizaje en español, frente a marcos más existenciales en inglés.
+
+**Herramientas y métodos:** `NLP multilingüe` `LDA` `Gensim` `AFINN` `Redes semánticas`
+
+---
+
+## El pulso mensual del mercado hipotecario español
+
+**Una aplicación interactiva para explorar la evolución territorial y estacional de los préstamos hipotecarios.**
+
+Desarrollé una aplicación con Streamlit para analizar datos del Colegio Oficial de Notarios por año y comunidad autónoma. El procesamiento con Pandas y las visualizaciones dinámicas con Plotly facilitan la comparación territorial y la identificación de patrones mensuales.
+
+**Herramientas y métodos:** `Streamlit` `Pandas` `Plotly` `Series temporales`
+
+proyectos.qmd{.btn .btn-primary}
+
+---
+
+# Perfil técnico
+
+## Análisis y modelado
+
+Python, Pandas, Scikit-learn, R, SPSS, estadística multivariante, aprendizaje no supervisado y simulación basada en agentes.
+
+## Datos e infraestructura
+
+SQL, PostgreSQL, APIs, procesos ETL y Docker.
+
+## Visualización y aplicaciones
+
+Power BI, Streamlit, Shiny, Plotly y Apache Superset.
+
+## Texto y redes
+
+NLTK, Gensim, análisis de sentimiento, modelado de tópicos y redes semánticas.
