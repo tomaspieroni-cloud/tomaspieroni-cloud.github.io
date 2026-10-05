@@ -1,0 +1,66 @@
+---
+title: "El pulso mensual del mercado hipotecario español"
+subtitle: "Una aplicación interactiva para explorar la evolución territorial y estacional de los préstamos hipotecarios"
+description: "Aplicación Streamlit para analizar la evolución mensual de los préstamos hipotecarios en España por comunidad autónoma."
+toc: true
+toc-title: "Contenido"
+---
+
+**Proyecto de análisis y visualización interactiva · 2026**
+
+`Streamlit` `Pandas` `Plotly` `Series temporales`
+
+## Resumen ejecutivo
+
+Una aplicación interactiva que permite explorar la evolución territorial y estacional de los préstamos hipotecarios formalizados en España a partir de datos del Colegio Oficial de Notarios.
+
+## El problema
+
+Los datos de préstamos hipotecarios por comunidad autónoma se publican en series largas que resultan difíciles de comparar manualmente. El objetivo fue construir una herramienta que permita filtrar por año y comunidad, y detectar patrones estacionales.
+
+## Los datos
+
+- Fuente: **Colegio Oficial de Notarios de España**.
+- Variables: número de hipotecas, cuantía total, año, mes, comunidad autónoma.
+
+## Qué hice específicamente
+
+1. Preparación de los datos con Pandas, incluyendo la construcción de una variable de fecha para ordenar la serie temporal.
+2. Cálculo del importe medio por hipoteca a partir de la cuantía total.
+3. Construcción de la interfaz con Streamlit: filtros de año y comunidad, y visualizaciones dinámicas con Plotly.
+4. Diseño de cuatro vistas analíticas:
+   - número de hipotecas en el tiempo,
+   - cuantía total en el tiempo,
+   - importe medio por hipoteca,
+   - estacionalidad mensual promedio.
+
+## Decisión metodológica principal
+
+Elegir **Streamlit** por sobre alternativas más pesadas permitió mantener la aplicación **simple, reproducible y fácil de desplegar**, sin perder capacidad interactiva.
+
+## Resultado
+
+Una aplicación interactiva que permite comparar comunidades autónomas, identificar patrones mensuales y acceder a los datos filtrados desde la propia interfaz.
+
+## Limitaciones
+
+- La aplicación no realiza proyecciones ni estimaciones; solo describe los datos observados.
+- La comparación entre comunidades requiere considerar diferencias de tamaño poblacional.
+- El corpus depende de la frecuencia de publicación de la fuente original.
+
+## Habilidades demostradas
+
+- Análisis de series temporales territoriales.
+- Construcción de aplicaciones interactivas.
+- Visualización de datos con Plotly.
+- Preparación de datos con Pandas.
+
+## Tecnologías
+
+`Python` · `Streamlit` · `Pandas` · `Plotly`
+
+---
+
+*Página completa y demo interactiva en preparación.*
+
+[← Volver a Proyectos](../proyectos.qmd){.btn .btn-outline-primary}

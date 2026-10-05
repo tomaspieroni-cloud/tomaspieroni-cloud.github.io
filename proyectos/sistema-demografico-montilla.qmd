@@ -1,0 +1,72 @@
+---
+title: "Sistema de Análisis Demográfico Municipal"
+subtitle: "Una solución de datos de extremo a extremo para el Ayuntamiento de Montilla"
+description: "ETL en R, PostgreSQL, Docker y un dashboard interactivo en Shiny para apoyar el análisis demográfico del Ayuntamiento de Montilla."
+toc: true
+toc-title: "Contenido"
+---
+
+**Prácticas curriculares · Universidad de Granada · Ayuntamiento de Montilla**
+
+`R` `Shiny` `PostgreSQL` `ETL` `Docker` `APIs`
+
+## Resumen ejecutivo
+
+Este proyecto desarrolla una solución de datos de extremo a extremo para transformar información demográfica dispersa en una herramienta accesible para la gestión municipal. La solución integra datos de fuentes públicas oficiales, los estructura en un modelo relacional y los expone mediante un dashboard interactivo.
+
+## El problema
+
+El Ayuntamiento de Montilla trabaja con información procedente de múltiples fuentes estadísticas oficiales (INE, IECA, SEPE) que históricamente han permanecido dispersas y sin integrar. La planificación de servicios sociales, la atención a mayores y las políticas de atracción de población joven requerían disponer de evidencia sistematizada.
+
+## Los datos
+
+El sistema integra series históricas de población, estructura por edades, indicadores de envejecimiento, dependencia, migración y paro registrado, provenientes de APIs públicas del INE y del IECA.
+
+## Qué hice específicamente
+
+Diseñé e implementé la totalidad del proyecto:
+
+1. Extracción y transformación mediante procesos ETL en R desde APIs públicas.
+2. Diseño del modelo relacional en PostgreSQL.
+3. Despliegue de PostgreSQL y Shiny Server en contenedores Docker.
+4. Desarrollo del dashboard interactivo en Shiny.
+5. Exploración adicional con Apache Superset.
+6. Elaboración de diccionario de datos, documentación técnica y manual de usuario.
+
+## Arquitectura
+
+**APIs públicas (INE, IECA)** → **ETL en R** → **PostgreSQL** → **Shiny / Apache Superset** → **Usuario final**
+
+Todo el sistema se orquesta con **Docker Compose**, lo que garantiza portabilidad y reproducibilidad del entorno completo.
+
+## Decisión metodológica principal
+
+La decisión más importante fue **no ocultar las discrepancias entre fuentes**. Cuando INE e IECA ofrecen series con metodologías distintas, el sistema las muestra por separado y documenta la diferencia, en lugar de imponer una reconciliación que perdería información sobre la producción estadística.
+
+## Resultado
+
+Un sistema reproducible que cubre extracción, transformación, almacenamiento, análisis, visualización, despliegue y documentación, entregado a la entidad con manual de usuario y diccionario de datos.
+
+## Limitaciones
+
+- La cobertura temporal depende de la disponibilidad de cada serie en las fuentes originales.
+- Algunas series requieren controles manuales de consistencia entre fuentes.
+- El sistema está diseñado para un municipio; su extensión a otros requiere revisar las correspondencias geográficas.
+
+## Habilidades demostradas
+
+- Ingeniería de datos end-to-end.
+- Diseño de bases de datos relacionales.
+- Construcción de aplicaciones Shiny con lógica reactiva.
+- Orquestación de contenedores con Docker Compose.
+- Documentación técnica y comunicación con usuarios no técnicos.
+
+## Tecnologías
+
+`R` · `tidyverse` · `Shiny` · `PostgreSQL` · `Apache Superset` · `Docker` · `APIs INE/IECA`
+
+---
+
+*Página completa en preparación.*
+
+[← Volver a Proyectos](../proyectos.qmd){.btn .btn-outline-primary}
