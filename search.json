@@ -91,9 +91,107 @@
     "text": "Habilidades demostradas\n\nProcesamiento y validación de microdatos de gran escala.\nAnálisis longitudinal de transiciones laborales.\nEstadística multivariante con datos mixtos.\nAprendizaje no supervisado.\nConstrucción e interpretación de índices compuestos.\nCalibración empírica de modelos computacionales.\nSimulación basada en agentes.\nDiseño de pipelines reproducibles.\nInterpretación metodológica y comunicación de limitaciones.\n\n../proyectos.qmd{.btn .btn-outline-primary}"
   },
   {
-    "objectID": "experiencia.html",
-    "href": "experiencia.html",
-    "title": "Experiencia",
+    "objectID": "proyectos/hipotecas-streamlit.html",
+    "href": "proyectos/hipotecas-streamlit.html",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "",
+    "text": "Proyecto de análisis y visualización interactiva · 2026\nStreamlit Pandas Plotly Series temporales"
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#resumen-ejecutivo",
+    "href": "proyectos/hipotecas-streamlit.html#resumen-ejecutivo",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "Resumen ejecutivo",
+    "text": "Resumen ejecutivo\nUna aplicación interactiva que permite explorar la evolución territorial y estacional de los préstamos hipotecarios formalizados en España a partir de datos del Colegio Oficial de Notarios."
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#el-problema",
+    "href": "proyectos/hipotecas-streamlit.html#el-problema",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "El problema",
+    "text": "El problema\nLos datos de préstamos hipotecarios por comunidad autónoma se publican en series largas que resultan difíciles de comparar manualmente. El objetivo fue construir una herramienta que permita filtrar por año y comunidad, y detectar patrones estacionales."
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#los-datos",
+    "href": "proyectos/hipotecas-streamlit.html#los-datos",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "Los datos",
+    "text": "Los datos\n\nFuente: Colegio Oficial de Notarios de España.\nVariables: número de hipotecas, cuantía total, año, mes, comunidad autónoma."
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#qué-hice-específicamente",
+    "href": "proyectos/hipotecas-streamlit.html#qué-hice-específicamente",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "Qué hice específicamente",
+    "text": "Qué hice específicamente\n\nPreparación de los datos con Pandas, incluyendo la construcción de una variable de fecha para ordenar la serie temporal.\nCálculo del importe medio por hipoteca a partir de la cuantía total.\nConstrucción de la interfaz con Streamlit: filtros de año y comunidad, y visualizaciones dinámicas con Plotly.\nDiseño de cuatro vistas analíticas:\n\nnúmero de hipotecas en el tiempo,\ncuantía total en el tiempo,\nimporte medio por hipoteca,\nestacionalidad mensual promedio."
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#decisión-metodológica-principal",
+    "href": "proyectos/hipotecas-streamlit.html#decisión-metodológica-principal",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "Decisión metodológica principal",
+    "text": "Decisión metodológica principal\nElegir Streamlit por sobre alternativas más pesadas permitió mantener la aplicación simple, reproducible y fácil de desplegar, sin perder capacidad interactiva."
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#resultado",
+    "href": "proyectos/hipotecas-streamlit.html#resultado",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "Resultado",
+    "text": "Resultado\nUna aplicación interactiva que permite comparar comunidades autónomas, identificar patrones mensuales y acceder a los datos filtrados desde la propia interfaz."
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#limitaciones",
+    "href": "proyectos/hipotecas-streamlit.html#limitaciones",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "Limitaciones",
+    "text": "Limitaciones\n\nLa aplicación no realiza proyecciones ni estimaciones; solo describe los datos observados.\nLa comparación entre comunidades requiere considerar diferencias de tamaño poblacional.\nEl corpus depende de la frecuencia de publicación de la fuente original."
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#habilidades-demostradas",
+    "href": "proyectos/hipotecas-streamlit.html#habilidades-demostradas",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "Habilidades demostradas",
+    "text": "Habilidades demostradas\n\nAnálisis de series temporales territoriales.\nConstrucción de aplicaciones interactivas.\nVisualización de datos con Plotly.\nPreparación de datos con Pandas."
+  },
+  {
+    "objectID": "proyectos/hipotecas-streamlit.html#tecnologías",
+    "href": "proyectos/hipotecas-streamlit.html#tecnologías",
+    "title": "El pulso mensual del mercado hipotecario español",
+    "section": "Tecnologías",
+    "text": "Tecnologías\nPython · Streamlit · Pandas · Plotly\n\nPágina completa y demo interactiva en preparación.\n← Volver a Proyectos"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Tomás Nelio Pieroni",
+    "section": "",
+    "text": "Transformo datos sociales y organizacionales en indicadores, modelos analíticos y herramientas que ayudan a comprender problemas complejos y tomar decisiones fundamentadas.\nPython · R · SQL · Power BI · Machine Learning · NLP · Visualización de datos\nSociólogo y Máster en Ciencia de Datos Aplicada a las Ciencias Sociales. Ocho años de experiencia en producción estadística pública. Residente en Granada, ciudadano de la Unión Europea y abierto a oportunidades en España y en modalidad remota.\nVer proyectos Sobre mí Contacto"
+  },
+  {
+    "objectID": "index.html#data-analyst-social-data-scientist",
+    "href": "index.html#data-analyst-social-data-scientist",
+    "title": "Tomás Nelio Pieroni",
+    "section": "",
+    "text": "Transformo datos sociales y organizacionales en indicadores, modelos analíticos y herramientas que ayudan a comprender problemas complejos y tomar decisiones fundamentadas.\nPython · R · SQL · Power BI · Machine Learning · NLP · Visualización de datos\nSociólogo y Máster en Ciencia de Datos Aplicada a las Ciencias Sociales. Ocho años de experiencia en producción estadística pública. Residente en Granada, ciudadano de la Unión Europea y abierto a oportunidades en España y en modalidad remota.\nVer proyectos Sobre mí Contacto"
+  },
+  {
+    "objectID": "index.html#perfil-técnico",
+    "href": "index.html#perfil-técnico",
+    "title": "Tomás Nelio Pieroni",
+    "section": "Perfil técnico",
+    "text": "Perfil técnico\n\n\nAnálisis y modelado\nPython, Pandas, Scikit-learn, R, SPSS, estadística multivariante, aprendizaje no supervisado y simulación basada en agentes.\n\n\nDatos e infraestructura\nSQL, PostgreSQL, APIs, procesos ETL y Docker.\n\n\nVisualización y aplicaciones\nPower BI, Streamlit, Shiny, Plotly y Apache Superset.\n\n\nTexto y redes\nNLTK, Gensim, análisis de sentimiento, modelado de tópicos y redes semánticas."
+  },
+  {
+    "objectID": "index.html#trabajamos-juntos",
+    "href": "index.html#trabajamos-juntos",
+    "title": "Tomás Nelio Pieroni",
+    "section": "¿Trabajamos juntos?",
+    "text": "¿Trabajamos juntos?\nEstoy abierto a oportunidades como Data Analyst o Social Data Scientist en España y en modalidad remota, tanto en empresas privadas como en organismos internacionales y organizaciones sociales.\nEscribime"
+  },
+  {
+    "objectID": "contacto.html",
+    "href": "contacto.html",
+    "title": "Contacto",
     "section": "",
     "text": "Contenido en construcción."
   },
@@ -105,81 +203,165 @@
     "text": "About this site"
   },
   {
-    "objectID": "contacto.html",
-    "href": "contacto.html",
-    "title": "Contacto",
+    "objectID": "experiencia.html",
+    "href": "experiencia.html",
+    "title": "Experiencia",
     "section": "",
     "text": "Contenido en construcción."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Tomás Nelio Pieroni",
+    "objectID": "proyectos/discursos-ia-youtube.html",
+    "href": "proyectos/discursos-ia-youtube.html",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
     "section": "",
-    "text": "Transformo datos sociales y organizacionales en indicadores, modelos analíticos y herramientas que ayudan a comprender problemas complejos y tomar decisiones fundamentadas.\nPython · R · SQL · Power BI · Machine Learning · NLP · Visualización de datos\nSociólogo y Máster en Ciencia de Datos Aplicada a las Ciencias Sociales. Ocho años de experiencia en producción estadística pública. Residente en Granada, ciudadano de la Unión Europea y abierto a oportunidades en España y remoto.\nproyectos.qmd{.btn .btn-primary} about.qmd{.btn .btn-outline-primary} contacto.qmd{.btn .btn-outline-secondary}"
+    "text": "Proyecto de Análisis de Textos y Redes Sociales · Universidad de Granada · 2026\nNLP multilingüe LDA Gensim AFINN Redes semánticas"
   },
   {
-    "objectID": "index.html#data-analyst-social-data-scientist",
-    "href": "index.html#data-analyst-social-data-scientist",
-    "title": "Tomás Nelio Pieroni",
+    "objectID": "proyectos/discursos-ia-youtube.html#resumen-ejecutivo",
+    "href": "proyectos/discursos-ia-youtube.html#resumen-ejecutivo",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Resumen ejecutivo",
+    "text": "Resumen ejecutivo\nEl proyecto analiza cómo se discute la inteligencia artificial generativa en YouTube cuando el contenido está en español y cuando está en inglés. El corpus reúne 6.804 comentarios extraídos de tres videos con enfoques distintos (pesimista, neutro y optimista), procesados con técnicas de minería de texto y análisis de redes sociales."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#el-problema",
+    "href": "proyectos/discursos-ia-youtube.html#el-problema",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "El problema",
+    "text": "El problema\nLa irrupción de modelos de IA generativa transformó un debate técnico en un fenómeno social amplio. El proyecto busca identificar si el discurso público se estructura de forma homogénea o si emergen comunidades discursivas diferenciadas según el idioma y el tipo de contenido."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#los-datos",
+    "href": "proyectos/discursos-ia-youtube.html#los-datos",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Los datos",
+    "text": "Los datos\n\n6.804 comentarios de YouTube.\n3 videos con enfoques distintos (pesimista, neutro, optimista).\nDos idiomas: español e inglés.\nVariables: texto, cantidad de likes, video de origen, idioma detectado."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#qué-hice-específicamente",
+    "href": "proyectos/discursos-ia-youtube.html#qué-hice-específicamente",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Qué hice específicamente",
+    "text": "Qué hice específicamente\n\nPreprocesamiento textual: minúsculas, limpieza de puntuación y caracteres especiales, normalización de acentos, tokenización y eliminación de stopwords específicas por idioma.\nDetección automática de idioma con langdetect.\nAnálisis de sentimiento léxico con el diccionario AFINN (versiones en español e inglés).\nModelado de tópicos con LDA usando Gensim, entrenando modelos separados por idioma.\nConstrucción de redes semánticas de coocurrencia con métricas de centralidad y detección de comunidades."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#hallazgos-principales",
+    "href": "proyectos/discursos-ia-youtube.html#hallazgos-principales",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Hallazgos principales",
+    "text": "Hallazgos principales\n\nEn español, el debate gira en torno al empleo, la adaptación profesional y la programación: términos como programar, aprender y futuro dominan los tópicos.\nEn inglés, aparecen con mayor fuerza marcos existenciales y teológicos: dios, simulación, humanos y control.\nEl discurso pesimista es más intenso emocionalmente y utiliza un vocabulario más bélico.\nLa red semántica del video optimista es más dispersa: el optimismo se expresa en términos abstractos."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#decisión-metodológica-principal",
+    "href": "proyectos/discursos-ia-youtube.html#decisión-metodológica-principal",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Decisión metodológica principal",
+    "text": "Decisión metodológica principal\nImplementar todo el pipeline en Python (en lugar de herramientas gráficas como Gephi) para garantizar trazabilidad, reproducibilidad e integración en un único flujo de trabajo."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#resultado",
+    "href": "proyectos/discursos-ia-youtube.html#resultado",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Resultado",
+    "text": "Resultado\nUn análisis tridimensional que articula emoción, tema y estructura del discurso, documentado con código reproducible y visualizaciones que permiten comparar los corpus."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#limitaciones",
+    "href": "proyectos/discursos-ia-youtube.html#limitaciones",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Limitaciones",
+    "text": "Limitaciones\n\nIronía y sarcasmo no detectados correctamente por el análisis léxico.\nSesgo de selección: los videos fueron elegidos por su contenido controversial.\nDesbalance del corpus: un video concentra la mayoría de los comentarios.\nAPI de YouTube: no recupera comentarios eliminados o marcados como spam.\nComparación entre corpus: los temas no son directamente equiparables entre idiomas.\nInterpretación de tópicos: los modelos LDA requieren revisión humana."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#habilidades-demostradas",
+    "href": "proyectos/discursos-ia-youtube.html#habilidades-demostradas",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Habilidades demostradas",
+    "text": "Habilidades demostradas\n\nProcesamiento de texto multilingüe.\nAnálisis de sentimiento y modelado de tópicos.\nConstrucción de redes semánticas y detección de comunidades.\nIntegración de técnicas NLP en un pipeline reproducible."
+  },
+  {
+    "objectID": "proyectos/discursos-ia-youtube.html#tecnologías",
+    "href": "proyectos/discursos-ia-youtube.html#tecnologías",
+    "title": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
+    "section": "Tecnologías",
+    "text": "Tecnologías\nPython · NLTK · Gensim · AFINN · NetworkX · langdetect · Jupyter\n\nPágina completa en preparación.\n← Volver a Proyectos"
+  },
+  {
+    "objectID": "proyectos/sistema-demografico-montilla.html",
+    "href": "proyectos/sistema-demografico-montilla.html",
+    "title": "Sistema de Análisis Demográfico Municipal",
     "section": "",
-    "text": "Transformo datos sociales y organizacionales en indicadores, modelos analíticos y herramientas que ayudan a comprender problemas complejos y tomar decisiones fundamentadas.\nPython · R · SQL · Power BI · Machine Learning · NLP · Visualización de datos\nSociólogo y Máster en Ciencia de Datos Aplicada a las Ciencias Sociales. Ocho años de experiencia en producción estadística pública. Residente en Granada, ciudadano de la Unión Europea y abierto a oportunidades en España y remoto.\nproyectos.qmd{.btn .btn-primary} about.qmd{.btn .btn-outline-primary} contacto.qmd{.btn .btn-outline-secondary}"
+    "text": "Prácticas curriculares · Universidad de Granada · Ayuntamiento de Montilla\nR Shiny PostgreSQL ETL Docker APIs"
   },
   {
-    "objectID": "index.html#informalidad-laboral-en-argentina-transiciones-segmentación-y-simulación",
-    "href": "index.html#informalidad-laboral-en-argentina-transiciones-segmentación-y-simulación",
-    "title": "Tomás Nelio Pieroni",
-    "section": "Informalidad laboral en Argentina: transiciones, segmentación y simulación",
-    "text": "Informalidad laboral en Argentina: transiciones, segmentación y simulación\nAnálisis descriptivo y longitudinal de trayectorias laborales mediante microdatos de la Encuesta Permanente de Hogares.\nIntegré y validé más de 759.000 registros procedentes de 16 bases trimestrales. El proyecto combina análisis de transiciones laborales, FAMD, clustering K-Means, construcción del Índice de Vulnerabilidad Laboral Relativa y un modelo basado en agentes calibrado empíricamente para explorar escenarios y analizar mecanismos.\nHerramientas y métodos: Python FAMD K-Means IVLR Simulación basada en agentes"
+    "objectID": "proyectos/sistema-demografico-montilla.html#resumen-ejecutivo",
+    "href": "proyectos/sistema-demografico-montilla.html#resumen-ejecutivo",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Resumen ejecutivo",
+    "text": "Resumen ejecutivo\nEste proyecto desarrolla una solución de datos de extremo a extremo para transformar información demográfica dispersa en una herramienta accesible para la gestión municipal. La solución integra datos de fuentes públicas oficiales, los estructura en un modelo relacional y los expone mediante un dashboard interactivo."
   },
   {
-    "objectID": "index.html#datos-demográficos-convertidos-en-una-herramienta-municipal",
-    "href": "index.html#datos-demográficos-convertidos-en-una-herramienta-municipal",
-    "title": "Tomás Nelio Pieroni",
-    "section": "Datos demográficos convertidos en una herramienta municipal",
-    "text": "Datos demográficos convertidos en una herramienta municipal\nUna solución de datos de extremo a extremo para apoyar el análisis demográfico del Ayuntamiento de Montilla.\nDesarrollé un flujo ETL en R desde APIs públicas del INE, organicé las series históricas en PostgreSQL y desplegué la arquitectura mediante Docker. El resultado fue un dashboard interactivo en Shiny acompañado por documentación técnica, diccionario de datos y manual de usuario.\nHerramientas y métodos: R Shiny PostgreSQL ETL APIs Docker"
+    "objectID": "proyectos/sistema-demografico-montilla.html#el-problema",
+    "href": "proyectos/sistema-demografico-montilla.html#el-problema",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "El problema",
+    "text": "El problema\nEl Ayuntamiento de Montilla trabaja con información procedente de múltiples fuentes estadísticas oficiales (INE, IECA, SEPE) que históricamente han permanecido dispersas y sin integrar. La planificación de servicios sociales, la atención a mayores y las políticas de atracción de población joven requerían disponer de evidencia sistematizada."
   },
   {
-    "objectID": "index.html#dos-idiomas-dos-conversaciones-sobre-inteligencia-artificial",
-    "href": "index.html#dos-idiomas-dos-conversaciones-sobre-inteligencia-artificial",
-    "title": "Tomás Nelio Pieroni",
-    "section": "Dos idiomas, dos conversaciones sobre inteligencia artificial",
-    "text": "Dos idiomas, dos conversaciones sobre inteligencia artificial\nNLP y redes semánticas para comparar los discursos sobre IA generativa en español e inglés.\nAnalicé 6.804 comentarios de YouTube mediante detección de idioma, análisis de sentimiento léxico, modelado de tópicos con LDA y redes semánticas de coocurrencia. Los resultados muestran un debate centrado en empleo y aprendizaje en español, frente a marcos más existenciales en inglés.\nHerramientas y métodos: NLP multilingüe LDA Gensim AFINN Redes semánticas"
+    "objectID": "proyectos/sistema-demografico-montilla.html#los-datos",
+    "href": "proyectos/sistema-demografico-montilla.html#los-datos",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Los datos",
+    "text": "Los datos\nEl sistema integra series históricas de población, estructura por edades, indicadores de envejecimiento, dependencia, migración y paro registrado, provenientes de APIs públicas del INE y del IECA."
   },
   {
-    "objectID": "index.html#el-pulso-mensual-del-mercado-hipotecario-español",
-    "href": "index.html#el-pulso-mensual-del-mercado-hipotecario-español",
-    "title": "Tomás Nelio Pieroni",
-    "section": "El pulso mensual del mercado hipotecario español",
-    "text": "El pulso mensual del mercado hipotecario español\nUna aplicación interactiva para explorar la evolución territorial y estacional de los préstamos hipotecarios.\nDesarrollé una aplicación con Streamlit para analizar datos del Colegio Oficial de Notarios por año y comunidad autónoma. El procesamiento con Pandas y las visualizaciones dinámicas con Plotly facilitan la comparación territorial y la identificación de patrones mensuales.\nHerramientas y métodos: Streamlit Pandas Plotly Series temporales\nproyectos.qmd{.btn .btn-primary}"
+    "objectID": "proyectos/sistema-demografico-montilla.html#qué-hice-específicamente",
+    "href": "proyectos/sistema-demografico-montilla.html#qué-hice-específicamente",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Qué hice específicamente",
+    "text": "Qué hice específicamente\nDiseñé e implementé la totalidad del proyecto:\n\nExtracción y transformación mediante procesos ETL en R desde APIs públicas.\nDiseño del modelo relacional en PostgreSQL.\nDespliegue de PostgreSQL y Shiny Server en contenedores Docker.\nDesarrollo del dashboard interactivo en Shiny.\nExploración adicional con Apache Superset.\nElaboración de diccionario de datos, documentación técnica y manual de usuario."
   },
   {
-    "objectID": "index.html#análisis-y-modelado",
-    "href": "index.html#análisis-y-modelado",
-    "title": "Tomás Nelio Pieroni",
-    "section": "Análisis y modelado",
-    "text": "Análisis y modelado\nPython, Pandas, Scikit-learn, R, SPSS, estadística multivariante, aprendizaje no supervisado y simulación basada en agentes."
+    "objectID": "proyectos/sistema-demografico-montilla.html#arquitectura",
+    "href": "proyectos/sistema-demografico-montilla.html#arquitectura",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Arquitectura",
+    "text": "Arquitectura\nAPIs públicas (INE, IECA) → ETL en R → PostgreSQL → Shiny / Apache Superset → Usuario final\nTodo el sistema se orquesta con Docker Compose, lo que garantiza portabilidad y reproducibilidad del entorno completo."
   },
   {
-    "objectID": "index.html#datos-e-infraestructura",
-    "href": "index.html#datos-e-infraestructura",
-    "title": "Tomás Nelio Pieroni",
-    "section": "Datos e infraestructura",
-    "text": "Datos e infraestructura\nSQL, PostgreSQL, APIs, procesos ETL y Docker."
+    "objectID": "proyectos/sistema-demografico-montilla.html#decisión-metodológica-principal",
+    "href": "proyectos/sistema-demografico-montilla.html#decisión-metodológica-principal",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Decisión metodológica principal",
+    "text": "Decisión metodológica principal\nLa decisión más importante fue no ocultar las discrepancias entre fuentes. Cuando INE e IECA ofrecen series con metodologías distintas, el sistema las muestra por separado y documenta la diferencia, en lugar de imponer una reconciliación que perdería información sobre la producción estadística."
   },
   {
-    "objectID": "index.html#visualización-y-aplicaciones",
-    "href": "index.html#visualización-y-aplicaciones",
-    "title": "Tomás Nelio Pieroni",
-    "section": "Visualización y aplicaciones",
-    "text": "Visualización y aplicaciones\nPower BI, Streamlit, Shiny, Plotly y Apache Superset."
+    "objectID": "proyectos/sistema-demografico-montilla.html#resultado",
+    "href": "proyectos/sistema-demografico-montilla.html#resultado",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Resultado",
+    "text": "Resultado\nUn sistema reproducible que cubre extracción, transformación, almacenamiento, análisis, visualización, despliegue y documentación, entregado a la entidad con manual de usuario y diccionario de datos."
   },
   {
-    "objectID": "index.html#texto-y-redes",
-    "href": "index.html#texto-y-redes",
-    "title": "Tomás Nelio Pieroni",
-    "section": "Texto y redes",
-    "text": "Texto y redes\nNLTK, Gensim, análisis de sentimiento, modelado de tópicos y redes semánticas."
+    "objectID": "proyectos/sistema-demografico-montilla.html#limitaciones",
+    "href": "proyectos/sistema-demografico-montilla.html#limitaciones",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Limitaciones",
+    "text": "Limitaciones\n\nLa cobertura temporal depende de la disponibilidad de cada serie en las fuentes originales.\nAlgunas series requieren controles manuales de consistencia entre fuentes.\nEl sistema está diseñado para un municipio; su extensión a otros requiere revisar las correspondencias geográficas."
+  },
+  {
+    "objectID": "proyectos/sistema-demografico-montilla.html#habilidades-demostradas",
+    "href": "proyectos/sistema-demografico-montilla.html#habilidades-demostradas",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Habilidades demostradas",
+    "text": "Habilidades demostradas\n\nIngeniería de datos end-to-end.\nDiseño de bases de datos relacionales.\nConstrucción de aplicaciones Shiny con lógica reactiva.\nOrquestación de contenedores con Docker Compose.\nDocumentación técnica y comunicación con usuarios no técnicos."
+  },
+  {
+    "objectID": "proyectos/sistema-demografico-montilla.html#tecnologías",
+    "href": "proyectos/sistema-demografico-montilla.html#tecnologías",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Tecnologías",
+    "text": "Tecnologías\nR · tidyverse · Shiny · PostgreSQL · Apache Superset · Docker · APIs INE/IECA\n\nPágina completa en preparación.\n← Volver a Proyectos"
   },
   {
     "objectID": "proyectos.html",

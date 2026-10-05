@@ -1,1 +1,121 @@
-/* css styles */
+/* ==========================================================================
+   Portfolio de Tomás Pieroni — estilos propios
+   Complementan el tema "cosmo" de Quarto
+   ========================================================================== */
+
+/* Hero de la portada */
+.hero {
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #343a40;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .btn {
+  margin: 0.35rem 0.25rem 0 0.25rem;
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e6e9ee;
+  border-radius: 10px;
+  padding: 1.75rem 1.75rem 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+  border-color: #d5dae1;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  margin-bottom: 0.75rem;
+  color: #495057;
+  line-height: 1.6;
+}
+
+/* Etiquetas técnicas dentro de las tarjetas */
+.project-card code {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 0.18em 0.55em;
+  margin: 0 0.15rem 0.35rem 0;
+  background: #eef2f7;
+  color: #2761e3;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Botones dentro de la tarjeta */
+.project-card .btn {
+  margin-top: 0.5rem;
+}
+
+/* Bloque final de llamada a la acción */
+.cta-block {
+  background: #f6f8fb;
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta-block h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: none;
+  margin-bottom: 0.75rem;
+}
+
+.cta-block p {
+  max-width: 640px;
+  margin: 0 auto 1.25rem auto;
+  color: #495057;
+}
+
+/* Títulos de sección */
+h1, h2 {
+  letter-spacing: -0.01em;
+}
+
+/* Separación consistente entre secciones */
+section.level1 {
+  margin-top: 2.5rem;
+}
+
+/* Ajuste en móvil */
+@media (max-width: 767.98px) {
+  .hero {
+    padding-top: 1.5rem;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .project-card {
+    padding: 1.25rem;
+  }
+}
