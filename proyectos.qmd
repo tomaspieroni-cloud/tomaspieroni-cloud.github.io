@@ -1,5 +1,62 @@
 ﻿---
 title: "Proyectos"
+description: "Selección de proyectos de análisis de datos, ciencia de datos aplicada y visualización."
+toc: false
 ---
 
-Contenido en construcción.
+Esta selección reúne proyectos en los que combino análisis estadístico, comprensión del contexto, construcción de herramientas y comunicación de resultados.
+
+## Proyectos destacados
+
+### Informalidad laboral en Argentina: transiciones, segmentación y simulación
+
+**Análisis descriptivo y longitudinal de trayectorias laborales mediante microdatos de la Encuesta Permanente de Hogares.**
+
+Integré y validé más de 759.000 registros procedentes de 16 bases trimestrales. El proyecto combina análisis de transiciones laborales, FAMD, clustering K-Means, construcción del Índice de Vulnerabilidad Laboral Relativa y un modelo basado en agentes calibrado empíricamente para explorar escenarios y analizar mecanismos.
+
+**Herramientas y métodos:** `Python` `FAMD` `K-Means` `IVLR` `Simulación basada en agentes`
+
+[Ver proyecto](proyectos/tfm-informalidad-laboral.qmd){.btn .btn-primary}
+---
+
+### Sistema de Análisis Demográfico Municipal
+
+**Una solución de datos de extremo a extremo para apoyar el análisis demográfico del Ayuntamiento de Montilla.**
+
+Desarrollo de un flujo ETL en R desde APIs públicas del INE, almacenamiento histórico en PostgreSQL, arquitectura en Docker y dashboard interactivo en Shiny.
+
+**Herramientas y métodos:** `R` `Shiny` `PostgreSQL` `ETL` `APIs` `Docker`
+
+*Página completa en preparación.*
+
+---
+
+### Dos idiomas, dos conversaciones sobre inteligencia artificial
+
+**NLP y redes semánticas para comparar los discursos sobre IA generativa en español e inglés.**
+
+Análisis de 6.804 comentarios mediante detección de idioma, sentimiento léxico, modelado de tópicos con LDA y redes semánticas de coocurrencia.
+
+**Herramientas y métodos:** `NLP multilingüe` `LDA` `Gensim` `AFINN` `Redes semánticas`
+
+*Página completa en preparación.*
+
+---
+
+### El pulso mensual del mercado hipotecario español
+
+**Una aplicación interactiva para explorar la evolución territorial y estacional de los préstamos hipotecarios.**
+
+Aplicación desarrollada con Streamlit, Pandas y Plotly para comparar comunidades autónomas e identificar patrones mensuales.
+
+**Herramientas y métodos:** `Streamlit` `Pandas` `Plotly` `Series temporales`
+
+*Página completa y demo interactiva en preparación.*
+
+## Otros análisis
+
+### Polarización y negatividad en el discurso político digital
+
+Estudio metodológico sobre tópicos, polaridad y polarización en 6.677 comentarios de YouTube. Se presentará como análisis agregado del discurso digital, con una sección específica sobre alcance y limitaciones.
+
+*Página completa en preparación.*

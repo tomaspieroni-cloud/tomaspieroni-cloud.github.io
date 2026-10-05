@@ -1,0 +1,142 @@
+---
+title: "Informalidad laboral en Argentina"
+subtitle: "Análisis longitudinal, segmentación multivariante y simulación basada en agentes"
+description: "Análisis de transiciones laborales a partir de microdatos de la EPH, construcción del IVLR y simulación de escenarios calibrada empíricamente."
+toc: true
+toc-title: "Contenido"
+---
+
+**Proyecto insignia · Trabajo Fin de Máster · Universidad de Granada**
+
+`Python` `Pandas` `Scikit-learn` `prince` `FAMD` `K-Means` `ABM`
+
+## Resumen ejecutivo
+
+Este proyecto analiza la informalidad laboral en Argentina como un fenómeno dinámico y heterogéneo. Integré más de 759.000 registros procedentes de 16 bases trimestrales de la Encuesta Permanente de Hogares y construí un flujo reproducible para estudiar transiciones entre situaciones laborales, identificar perfiles diferenciados de vulnerabilidad y explorar su evolución mediante simulación.
+
+El trabajo combina análisis descriptivo y longitudinal, reducción de dimensionalidad con FAMD, clustering K-Means, construcción del Índice de Vulnerabilidad Laboral Relativa y un modelo basado en agentes calibrado empíricamente. El objetivo no es anticipar resultados individuales, sino comprender estructuras, transiciones y mecanismos asociados con la informalidad laboral.
+
+## El problema
+
+La informalidad laboral no constituye una situación uniforme ni necesariamente permanente. Las personas pueden transitar entre empleo formal, empleo informal, desempleo e inactividad, mientras que sus condiciones laborales dependen de múltiples dimensiones sociales, ocupacionales y económicas.
+
+Analizar únicamente la proporción de trabajadores informales permite describir la magnitud del fenómeno, pero no explica cómo se producen las transiciones ni qué perfiles presentan una mayor vulnerabilidad relativa. El desafío consistió en integrar esas dimensiones dentro de un marco analítico coherente y reproducible.
+
+## Los datos
+
+El proyecto utiliza microdatos de la Encuesta Permanente de Hogares de Argentina.
+
+La base analítica se construyó mediante:
+
+- Integración de más de 759.000 registros.
+- Procesamiento de 16 bases trimestrales.
+- Homogeneización de variables y categorías.
+- Clasificación de situaciones de formalidad laboral.
+- Construcción de observaciones longitudinales.
+- Validación de consistencia entre periodos.
+- Preparación de variables sociales, laborales y ocupacionales.
+
+La estructura longitudinal permitió observar cambios de situación laboral y construir matrices de transición utilizadas posteriormente en la simulación.
+
+## Qué hice específicamente
+
+Diseñé e implementé el pipeline completo del proyecto:
+
+1. Integración, limpieza y validación de los microdatos de la EPH.
+2. Clasificación de las situaciones de formalidad laboral.
+3. Construcción del panel longitudinal.
+4. Análisis descriptivo de las transiciones laborales.
+5. Aplicación de FAMD para sintetizar información mixta, numérica y categórica.
+6. Segmentación de perfiles mediante clustering K-Means.
+7. Construcción del Índice de Vulnerabilidad Laboral Relativa.
+8. Estimación y calibración de matrices de transición.
+9. Desarrollo de un modelo basado en agentes.
+10. Simulación de escenarios y análisis de los mecanismos emergentes.
+
+El trabajo fue desarrollado principalmente en Python mediante Pandas, Scikit-learn y prince, utilizando Jupyter y Google Colab como entornos de análisis.
+
+## La decisión metodológica más importante
+
+La principal decisión fue no tratar la informalidad como una etiqueta aislada ni reducir el proyecto a una clasificación individual. El análisis se organizó en tres niveles complementarios:
+
+### Transiciones laborales
+
+El componente longitudinal permitió estudiar cambios entre distintas situaciones laborales y superar una lectura exclusivamente transversal.
+
+### Segmentación multivariante
+
+La combinación de FAMD y K-Means permitió identificar perfiles laborales a partir de múltiples características sin imponer previamente categorías de vulnerabilidad.
+
+### Simulación calibrada empíricamente
+
+Los resultados del análisis de segmentación y las matrices de transición se utilizaron para calibrar el modelo basado en agentes. De esta manera, la simulación quedó vinculada con patrones observados en los microdatos, en lugar de depender exclusivamente de supuestos teóricos.
+
+## El Índice de Vulnerabilidad Laboral Relativa
+
+El IVLR sintetiza distintas dimensiones asociadas con la posición laboral de los perfiles identificados. Su carácter es relativo: permite comparar niveles de vulnerabilidad dentro de la estructura analizada, no establecer una medida universal ni permanente de vulnerabilidad individual.
+
+El índice funciona como un puente entre:
+
+- la estructura multivariante de los datos;
+- los perfiles obtenidos mediante clustering;
+- las transiciones laborales observadas;
+- la calibración de los agentes;
+- y el análisis de escenarios.
+
+## El modelo basado en agentes
+
+El ABM representa una población de agentes con perfiles laborales calibrados a partir de los resultados empíricos. Los agentes pueden cambiar de situación siguiendo mecanismos y probabilidades derivados del análisis de transiciones.
+
+La simulación permite explorar cómo determinadas modificaciones en las condiciones del sistema pueden alterar:
+
+- la composición de los perfiles laborales;
+- la movilidad entre situaciones;
+- la persistencia de condiciones vulnerables;
+- y los patrones agregados de informalidad.
+
+Los escenarios no deben interpretarse como pronósticos. Funcionan como experimentos analíticos para estudiar mecanismos y posibles dinámicas bajo distintos supuestos.
+
+## El resultado
+
+El resultado es un sistema analítico reproducible que conecta microdatos laborales, análisis longitudinal, segmentación multivariante, construcción de indicadores y simulación social.
+
+El proyecto permite:
+
+- describir transiciones entre situaciones laborales;
+- identificar perfiles diferenciados de vulnerabilidad;
+- sintetizar esas diferencias mediante el IVLR;
+- calibrar agentes con evidencia empírica;
+- explorar escenarios mediante simulación;
+- y analizar los mecanismos que generan determinados resultados agregados.
+
+Además de sus resultados sustantivos, el proyecto demuestra capacidad para trabajar con microdatos de gran escala, integrar técnicas estadísticas y computacionales, documentar decisiones metodológicas y comunicar con claridad los límites de cada componente.
+
+## Pipeline analítico
+
+**Datos EPH → clasificación de formalidad → panel longitudinal → análisis de transiciones → FAMD → clustering K-Means → IVLR → matrices de transición → ABM → simulación de escenarios → análisis de mecanismos**
+
+## Limitaciones e interpretación responsable
+
+Los resultados deben interpretarse teniendo en cuenta las siguientes consideraciones:
+
+- Los perfiles dependen de las variables y periodos incluidos.
+- El clustering identifica estructuras relativas dentro de los datos analizados.
+- El IVLR permite comparaciones internas y no representa una medida universal.
+- Las matrices de transición sintetizan patrones observados en periodos concretos.
+- El ABM simplifica procesos laborales y económicos más amplios.
+- Los escenarios simulados permiten explorar mecanismos, pero no constituyen pronósticos.
+- Los resultados agregados no deben utilizarse para determinar el futuro laboral de personas concretas.
+
+## Habilidades demostradas
+
+- Procesamiento y validación de microdatos de gran escala.
+- Análisis longitudinal de transiciones laborales.
+- Estadística multivariante con datos mixtos.
+- Aprendizaje no supervisado.
+- Construcción e interpretación de índices compuestos.
+- Calibración empírica de modelos computacionales.
+- Simulación basada en agentes.
+- Diseño de pipelines reproducibles.
+- Interpretación metodológica y comunicación de limitaciones.
+
+../proyectos.qmd{.btn .btn-outline-primary}
