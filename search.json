@@ -4,7 +4,7 @@
     "href": "proyectos/tfm-informalidad-laboral.html",
     "title": "Informalidad laboral en Argentina",
     "section": "",
-    "text": "TRABAJO FIN DE MÁSTER · UNIVERSIDAD DE GRANADA · SEPTIEMBRE 2026\nR Python Pandas Scikit-learn prince FAMD K-Means NetLogo"
+    "text": "TRABAJO FIN DE MÁSTER · UNIVERSIDAD DE GRANADA · SEPTIEMBRE 2026\nR Python Pandas Scikit-learn prince FAMD K-Means NetLogo\nVer código en GitHub"
   },
   {
     "objectID": "proyectos/tfm-informalidad-laboral.html#resumen-ejecutivo",
@@ -67,14 +67,14 @@
     "href": "proyectos/tfm-informalidad-laboral.html#habilidades-demostradas",
     "title": "Informalidad laboral en Argentina",
     "section": "Habilidades demostradas",
-    "text": "Habilidades demostradas\nProcesamiento y validación de microdatos a gran escala, análisis longitudinal, estadística multivariante con datos mixtos, construcción de índices, calibración empírica de simulaciones y comunicación de resultados y de sus límites.\nVolver a Proyectos"
+    "text": "Habilidades demostradas\nProcesamiento y validación de microdatos a gran escala, análisis longitudinal, estadística multivariante con datos mixtos, construcción de índices, calibración empírica de simulaciones y comunicación de resultados y de sus límites.\nVolver a ProyectosVer código en GitHub"
   },
   {
     "objectID": "proyectos/hipotecas-streamlit.html",
     "href": "proyectos/hipotecas-streamlit.html",
     "title": "El pulso mensual del mercado hipotecario español",
     "section": "",
-    "text": "ANÁLISIS Y VISUALIZACIÓN INTERACTIVA · 2026\nPython Streamlit Pandas Plotly Series temporales"
+    "text": "ANÁLISIS Y VISUALIZACIÓN INTERACTIVA · 2026\nPython Streamlit Pandas Plotly Series temporales\nVer código en GitHub"
   },
   {
     "objectID": "proyectos/hipotecas-streamlit.html#resumen-ejecutivo",
@@ -130,7 +130,7 @@
     "href": "proyectos/hipotecas-streamlit.html#habilidades-demostradas",
     "title": "El pulso mensual del mercado hipotecario español",
     "section": "Habilidades demostradas",
-    "text": "Habilidades demostradas\n\nAnálisis de series temporales territoriales.\nConstrucción de aplicaciones interactivas.\nVisualización con Plotly y preparación de datos con Pandas.\n\nVolver a Proyectos"
+    "text": "Habilidades demostradas\n\nAnálisis de series temporales territoriales.\nConstrucción de aplicaciones interactivas.\nVisualización con Plotly y preparación de datos con Pandas.\n\nVolver a ProyectosVer código en GitHub"
   },
   {
     "objectID": "proyectos/cordoba-censos.html",
@@ -277,7 +277,7 @@
     "href": "proyectos/sistema-demografico-montilla.html",
     "title": "Sistema de Análisis Demográfico Municipal",
     "section": "",
-    "text": "INTEGRACIÓN Y VISUALIZACIÓN DE DATOS · PRÁCTICAS CURRICULARES · UNIVERSIDAD DE GRANADA · AYUNTAMIENTO DE MONTILLA · MARZO – JUNIO 2026\nR tidyverse Shiny PostgreSQL Docker Apache Superset APIs INE/IECA"
+    "text": "INTEGRACIÓN Y VISUALIZACIÓN DE DATOS · PRÁCTICAS CURRICULARES · UNIVERSIDAD DE GRANADA · AYUNTAMIENTO DE MONTILLA · MARZO – JUNIO 2026\nR tidyverse Shiny PostgreSQL Docker Apache Superset APIs INE/IECA\nVer código en GitHub"
   },
   {
     "objectID": "proyectos/sistema-demografico-montilla.html#resumen-ejecutivo",
@@ -347,6 +347,6 @@
     "href": "proyectos/sistema-demografico-montilla.html#habilidades-demostradas",
     "title": "Sistema de Análisis Demográfico Municipal",
     "section": "Habilidades demostradas",
-    "text": "Habilidades demostradas\n\nIntegración de fuentes, ETL, modelado relacional, despliegue y visualización de datos.\nAplicaciones Shiny con lógica reactiva.\nOrquestación de contenedores con Docker Compose.\nDocumentación técnica y comunicación con usuarios no técnicos.\n\nVolver a Proyectos"
+    "text": "Habilidades demostradas\n\nIntegración de fuentes, ETL, modelado relacional, despliegue y visualización de datos.\nAplicaciones Shiny con lógica reactiva.\nOrquestación de contenedores con Docker Compose.\nDocumentación técnica y comunicación con usuarios no técnicos.\n\nVolver a ProyectosVer código en GitHub"
   }
 ]
