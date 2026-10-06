@@ -1,5 +1,140 @@
-﻿---
-title: "Experiencia"
+---
+pagetitle: "Experiencia · Tomás Pieroni"
+description: "Trayectoria profesional en producción estadística pública, analítica aplicada y ciencia de datos."
+page-layout: custom
+toc: false
 ---
 
-Contenido en construcción.
+```{=html}
+<section class="page-hero" aria-labelledby="titulo-pagina">
+  <svg class="page-hero__line" viewBox="0 0 640 260" aria-hidden="true" focusable="false">
+    <path d="M0,170 C120,168 150,90 250,104 S380,200 470,140 S580,60 640,80" fill="none" stroke="#D8D5A8" stroke-width="2"/>
+    <circle cx="250" cy="104" r="7" fill="#0B1B24" stroke="#E3E0B8" stroke-width="2"/>
+    <circle cx="470" cy="140" r="7" fill="#0B1B24" stroke="#E3E0B8" stroke-width="2"/>
+  </svg>
+  <div class="site-container">
+    <p class="mono-label">EXPERIENCIA</p>
+    <h1 id="titulo-pagina">Ocho años de trayectoria en producción y análisis estadístico</h1>
+    <p class="lead">Tres frentes que se superponen en el tiempo: la producción estadística pública como base, la consultoría privada en investigación de mercado e impacto, y la Ciencia de Datos como ampliación de escala y de método.</p>
+    <div class="btn-row" style="margin-top:2rem">
+      <a class="btn-tp btn-tp--secondary" href="files/cv-tomas-pieroni-data-analyst.pdf" download>Descargar CV completo <span class="visually-hidden-text">(PDF)</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section paper section--tight" aria-label="Etapas de la trayectoria">
+  <div class="site-container">
+
+    <!-- Etapa 1 -->
+    <article class="stage" aria-labelledby="e1">
+      <div class="stage__aside">
+        <span class="stage__n" aria-hidden="true">01</span>
+        <h2 id="e1">Producción estadística pública</h2>
+        <span class="mono-label">ENERO 2018 – ENERO 2026 · CÓRDOBA, ARGENTINA</span>
+      </div>
+      <div>
+        <div class="role">
+          <h3>Data Analyst · Reporting, indicadores y calidad del dato</h3>
+          <p class="meta">Dirección de Calidad de Procesos Estadísticos, Gobierno de Córdoba · Encuestador (2018) → Supervisor de encuestadores (2019) → Data Analyst (2020–2026)</p>
+          <dl>
+            <dt>CONTEXTO</dt>
+            <dd>Producción de estadísticas oficiales para responsables de gestión y equipos técnicos de la provincia.</dd>
+            <dt>CONTRIBUCIÓN</dt>
+            <dd>Diseño y seguimiento de indicadores laborales, sociales y económicos; dashboards y tabulaciones en Power BI, R y Excel; automatización con scripts reutilizables en R y SPSS Syntax para bases de más de 4.000 registros y 130 variables; integración y validación de fuentes heterogéneas con documentación metodológica.</dd>
+            <dt>CAPACIDAD</dt>
+            <dd>Calidad, consistencia y trazabilidad de la información; coordinación de operativos y equipos de hasta seis personas.</dd>
+            <dt>RESULTADO</dt>
+            <dd>Informe Mensual de Empleo Registrado (2022–2026), publicación semestral del Marco de Bienestar OCDE (2022–2025), referente provincial RelSEP ante el INDEC y participación en el Censo Nacional 2022.</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+
+    <!-- Etapa 2 -->
+    <article class="stage" aria-labelledby="e2">
+      <div class="stage__aside">
+        <span class="stage__n" aria-hidden="true">02</span>
+        <h2 id="e2">Analítica aplicada y consultoría</h2>
+        <span class="mono-label">2020 – 2025 · ARGENTINA Y REMOTO</span>
+        <p class="stage__intro">Experiencia en investigación de mercado, análisis de impacto y consultoría de datos. Diseño de instrumentos, coordinación de relevamientos, construcción de indicadores, segmentación, integración de evidencia cuantitativa y cualitativa, visualización y elaboración de recomendaciones para clientes.</p>
+      </div>
+      <div>
+        <div class="role">
+          <h3>Consultor de investigación y analítica de datos · Comparactiva</h3>
+          <p class="meta">Abril 2024 – octubre 2025 · Remoto</p>
+          <p class="role-focus">Power BI, Python, investigación aplicada e informes para clientes.</p>
+          <dl>
+            <dt>CONTEXTO</dt>
+            <dd>Investigaciones cuantitativas y cualitativas para clientes.</dd>
+            <dt>CONTRIBUCIÓN</dt>
+            <dd>Traducción de necesidades en variables, indicadores y criterios de análisis; procesamiento y visualización con Power BI y Python; orientación metodológica sobre calidad y consistencia.</dd>
+            <dt>RESULTADO</dt>
+            <dd>Informes y presentaciones para audiencias no técnicas; coautoría del estudio comparativo de los Censos 2010 y 2022 sobre inserción laboral juvenil.</dd>
+          </dl>
+        </div>
+        <div class="role">
+          <h3>Analista principal de impacto social · GeoTellus</h3>
+          <p class="meta">Marzo 2020 – julio 2022 · Argentina</p>
+          <p class="role-focus">Ciclo completo del dato, indicadores, líneas de base, riesgos y stakeholders.</p>
+          <dl>
+            <dt>CONTEXTO</dt>
+            <dd>Estudios de impacto social para proyectos de inversión.</dd>
+            <dt>CONTRIBUCIÓN</dt>
+            <dd>Diseño de cuestionarios e instrumentos, coordinación del trabajo de campo y gestión del ciclo completo del dato; integración de evidencia cuantitativa y cualitativa.</dd>
+            <dt>CAPACIDAD</dt>
+            <dd>Sistemas de indicadores para línea de base, seguimiento y análisis de cambios durante el ciclo del proyecto.</dd>
+            <dt>RESULTADO</dt>
+            <dd>Informes y visualizaciones para stakeholders con recomendaciones para mitigar impactos sobre comunidades y servicios públicos.</dd>
+          </dl>
+        </div>
+        <div class="role">
+          <h3>Responsable de investigación de mercado y análisis de datos · Alcance S.A.</h3>
+          <p class="meta">Septiembre 2020 – febrero 2021 · Argentina</p>
+          <p class="role-focus">Estudio de mercado de extremo a extremo: segmentación, 400 encuestas, grupos focales, visualizaciones y recomendaciones comerciales.</p>
+          <dl>
+            <dt>CONTEXTO</dt>
+            <dd>Estudio de mercado de extremo a extremo para evaluar el potencial de un producto.</dd>
+            <dt>CONTRIBUCIÓN</dt>
+            <dd>Planificación en tres etapas (estrategia y segmentación, trabajo de campo, análisis y presentación); definición de segmentos, variables e indicadores; encuesta por muestreo de 400 casos y grupos focales; análisis estadístico y visualizaciones.</dd>
+            <dt>RESULTADO</dt>
+            <dd>Informe final con conclusiones y propuestas de acción, y matrices de stakeholders, comunicación y riesgos.</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+
+    <!-- Etapa 3 -->
+    <article class="stage" aria-labelledby="e3">
+      <div class="stage__aside">
+        <span class="stage__n" aria-hidden="true">03</span>
+        <h2 id="e3">Ciencia de datos aplicada</h2>
+        <span class="mono-label">2025 – 2026 · GRANADA, ESPAÑA</span>
+      </div>
+      <div>
+        <div class="role">
+          <h3>Data Analyst en prácticas · Ayuntamiento de Montilla / Universidad de Granada</h3>
+          <p class="meta">Marzo – junio 2026 · 150 horas</p>
+          <dl>
+            <dt>CONTEXTO</dt>
+            <dd>Datos demográficos dispersos entre fuentes oficiales y sin integrar.</dd>
+            <dt>CONTRIBUCIÓN</dt>
+            <dd>Integración de fuentes con ETL en R desde APIs públicas, base relacional en PostgreSQL, despliegue con Docker sobre Ubuntu y dashboard en Shiny; exploración de Apache Superset.</dd>
+            <dt>RESULTADO</dt>
+            <dd>Sistema entregado con diccionario de datos, documentación técnica, manual de usuario y presentación ejecutiva. <a href="proyectos/sistema-demografico-montilla.html">Ver el caso</a>.</dd>
+          </dl>
+        </div>
+        <div class="role">
+          <h3>Máster en Ciencia de Datos Aplicada a las Ciencias Sociales · Universidad de Granada</h3>
+          <p class="meta">2025 – 2026 · Nota final 9,1/10</p>
+          <dl>
+            <dt>CAPACIDAD</dt>
+            <dd>Aprendizaje automático, estadística multivariante, NLP, análisis de redes y simulación social.</dd>
+            <dt>RESULTADO</dt>
+            <dd>TFM sobre informalidad laboral en Argentina con 759.264 registros de la EPH, FAMD, K-Means, el IVLR y un modelo basado en agentes en NetLogo. <a href="proyectos/tfm-informalidad-laboral.html">Ver el caso</a>.</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+```

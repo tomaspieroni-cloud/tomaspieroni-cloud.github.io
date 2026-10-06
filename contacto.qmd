@@ -1,5 +1,48 @@
-﻿---
-title: "Contacto"
+---
+pagetitle: "Contacto · Tomás Pieroni"
+description: "Contacto de Tomás Pieroni, Data Analyst en Granada, España."
+page-layout: custom
+toc: false
 ---
 
-Contenido en construcción.
+```{=html}
+<section class="page-hero page-hero--full" aria-labelledby="titulo-pagina">
+  <div class="site-container contact-grid">
+    <div>
+      <p class="mono-label">CONTACTO</p>
+      <h1 id="titulo-pagina">Conversemos</h1>
+      <p class="lead">Si tu proyecto necesita integrar fuentes, construir indicadores, automatizar análisis o comunicar resultados complejos con claridad, podemos conversar.</p>
+      <p class="lead">Trabajo combinando análisis estadístico, calidad de datos y comprensión del contexto para desarrollar resultados útiles y fundamentar decisiones.</p>
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn-tp btn-tp--primary" href="mailto:tomaspieroni@gmail.com?subject=Contacto%20desde%20el%20portfolio">Escribir un correo</a>
+        <button type="button" class="btn-tp btn-tp--secondary" id="copiar-correo" data-email="tomaspieroni@gmail.com">Copiar dirección de correo</button>
+        <a class="btn-tp btn-tp--ghost" href="files/cv-tomas-pieroni-data-analyst.pdf" download>Descargar CV <span class="visually-hidden-text">(PDF)</span></a>
+      </div>
+      <p class="copy-status" id="copiar-estado" role="status" aria-live="polite"></p>
+    </div>
+    <ul class="contact-list" aria-label="Datos de contacto">
+      <li><span class="mono-label">CORREO</span><a href="mailto:tomaspieroni@gmail.com">tomaspieroni@gmail.com</a></li>
+      <li><span class="mono-label">LINKEDIN</span><a href="https://www.linkedin.com/in/tomas-pieroni/">linkedin.com/in/tomas-pieroni</a></li>
+      <li><span class="mono-label">GITHUB</span><a href="https://github.com/tomaspieroni-cloud">github.com/tomaspieroni-cloud</a></li>
+      <li><span class="mono-label">UBICACIÓN</span><span class="value">Granada, España · Ciudadano UE</span></li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  // Copia la dirección al portapapeles: alternativa por si el equipo no tiene una aplicación de correo configurada
+  (function () {
+    var btn = document.getElementById('copiar-correo');
+    var estado = document.getElementById('copiar-estado');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var email = btn.getAttribute('data-email');
+      var ok = function () { estado.textContent = 'Dirección copiada: ' + email; };
+      var fallo = function () { estado.textContent = 'No se pudo copiar. La dirección es ' + email; };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(ok, fallo);
+      } else { fallo(); }
+    });
+  })();
+</script>
+```

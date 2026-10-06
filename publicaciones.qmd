@@ -1,5 +1,61 @@
-﻿---
-title: "Publicaciones"
+---
+pagetitle: "Publicaciones · Tomás Pieroni"
+description: "Publicaciones institucionales, coautorías y trabajos académicos de Tomás Pieroni."
+page-layout: custom
+toc: false
 ---
 
-Contenido en construcción.
+```{=html}
+<section class="page-hero" aria-labelledby="titulo-pagina">
+  <svg class="page-hero__line" viewBox="0 0 640 260" aria-hidden="true" focusable="false">
+    <path d="M0,150 C110,148 160,200 260,180 S400,70 500,96 S600,150 640,140" fill="none" stroke="#D8D5A8" stroke-width="2"/>
+    <circle cx="260" cy="180" r="7" fill="#0B1B24" stroke="#E3E0B8" stroke-width="2"/>
+  </svg>
+  <div class="site-container">
+    <p class="mono-label">PUBLICACIONES</p>
+    <h1 id="titulo-pagina">Informes, series y estudios</h1>
+    <p class="lead">Publicaciones institucionales en estadística pública, coautorías en investigación aplicada y, por separado, trabajos académicos del máster.</p>
+  </div>
+</section>
+
+<section class="section section--flush-top" aria-labelledby="titulo-inst">
+  <div class="site-container">
+    <header class="section-head">
+      <h2 id="titulo-inst">Publicaciones institucionales</h2>
+      <p>Dirección de Calidad de Procesos Estadísticos, Gobierno de Córdoba. Participación en el análisis y la elaboración.</p>
+    </header>
+    <ul class="pub-list">
+      <li><span class="year">2022 – 2026</span><div><h3>Informe Mensual de Empleo Registrado</h3><p>Serie mensual de análisis estadístico del empleo registrado en Córdoba y Argentina.</p></div><span class="type">SERIE MENSUAL</span></li>
+      <li><span class="year">2022 – 2025</span><div><h3>Marco de Bienestar OCDE: brechas de género en salud, educación y empleo</h3><p>Publicación semestral de indicadores de bienestar con enfoque de género.</p></div><span class="type">SEMESTRAL</span></li>
+      <li><span class="year">2021 – 2024</span><div><h3>Informe sobre percepción de la salud en Córdoba. Indicadores OCDE</h3><p>Publicación semestral.</p></div><span class="type">SEMESTRAL</span></li>
+      <li><span class="year">2022</span><div><h3>Relevamiento ConocerT</h3><p>Participación en el equipo de diseño e implementación del estudio, junto al Ministerio de Justicia y Derechos Humanos y el Ministerio de Coordinación de Córdoba. <a href="files/relevamiento-conocert-2022.pdf">Descargar el informe (PDF, 1,3 MB)</a></p></div><span class="type">INFORME</span></li>
+      <li><span class="year">2021</span><div><h3>Síntesis de indicadores clave del mercado laboral</h3><p>Indicadores laborales a partir de la Encuesta Permanente de Hogares.</p></div><span class="type">INFORME</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="titulo-coaut">
+  <div class="site-container">
+    <header class="section-head">
+      <h2 id="titulo-coaut">Coautorías</h2>
+    </header>
+    <ul class="pub-list">
+      <li><span class="year">2024</span><div><h3>12 años después: juventud en el entorno laboral</h3><p>Estudio comparativo de los Censos 2010 y 2022 sobre la inserción laboral juvenil. Comparactiva.</p></div><span class="type">ESTUDIO</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--deep" aria-labelledby="titulo-academicos">
+  <div class="site-container">
+    <header class="section-head">
+      <h2 id="titulo-academicos">Trabajos académicos</h2>
+      <p>Máster en Ciencia de Datos Aplicada a las Ciencias Sociales, Universidad de Granada. No son publicaciones profesionales.</p>
+    </header>
+    <ul class="pub-list">
+      <li><span class="year">2026</span><div><h3>La informalidad laboral en Argentina ante shocks económicos: una simulación basada en agentes con calibración empírica (2022–2025)</h3><p>Trabajo Fin de Máster. <a href="proyectos/tfm-informalidad-laboral.html">Ver el caso</a>.</p></div><span class="type">TFM</span></li>
+      <li><span class="year">2026</span><div><h3>La arena digital polarizada: emociones, discursos y confrontación en comentarios de YouTube</h3><p>Taller de Aplicaciones en Comunicación Sociopolítica. Análisis de 6.677 comentarios con TF-IDF, LDA y polaridad emocional.</p></div><span class="type">TRABAJO FINAL</span></li>
+      <li><span class="year">2026</span><div><h3>Polarización discursiva en torno a la inteligencia artificial en YouTube mediante ARS y análisis de texto</h3><p>Análisis de Textos y Redes Sociales. <a href="proyectos/discursos-ia-youtube.html">Ver el caso</a>.</p></div><span class="type">TRABAJO FINAL</span></li>
+    </ul>
+  </div>
+</section>
+```

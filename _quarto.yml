@@ -1,10 +1,22 @@
-﻿project:
+project:
   type: website
+  output-dir: _site
+  resources:
+    - "images/**"
+    - "files/**"
+    - "fonts/**"
 
 website:
   title: "Tomás Pieroni"
+  description: "Data Analyst con formación en Sociología y Ciencia de Datos."
+  site-url: "https://tomaspieroni-cloud.github.io/"
+  favicon: images/favicon.svg
+  search: false
+  page-navigation: false
   navbar:
-    left:
+    title: "Tomás Pieroni"
+    collapse-below: lg
+    right:
       - text: "Inicio"
         href: index.qmd
       - text: "Proyectos"
@@ -17,11 +29,34 @@ website:
         href: publicaciones.qmd
       - text: "Contacto"
         href: contacto.qmd
+  page-footer:
+    border: false
+    left: |
+      **Tomás Nelio Pieroni** · Data Analyst<br>
+      Granada, España · Ciudadano UE · © 2026
+    right:
+      - text: "LinkedIn"
+        href: https://www.linkedin.com/in/tomas-pieroni/
+        aria-label: "Perfil de LinkedIn de Tomás Pieroni"
+      - text: "GitHub"
+        href: https://github.com/tomaspieroni-cloud
+        aria-label: "Perfil de GitHub de Tomás Pieroni"
+      - text: "tomaspieroni@gmail.com"
+        href: mailto:tomaspieroni@gmail.com
 
 format:
   html:
-    theme: cosmo
+    theme: default
     css: styles.css
-    toc: true
+    toc: false
+    anchor-sections: false
+    smooth-scroll: false
+    link-external-newwindow: true
+    link-external-icon: false
+    title-block-banner: false
+    lightbox: auto
+    lang: es
 
 lang: es
+language:
+  toggle-navigation: "Abrir o cerrar el menú"
