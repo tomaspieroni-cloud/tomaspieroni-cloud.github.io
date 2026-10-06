@@ -32,7 +32,8 @@ toc: false
         <ul class="tag-list" aria-label="Métodos y herramientas">
           <li class="tag">R</li><li class="tag">ETL</li><li class="tag">PostgreSQL</li><li class="tag">Docker</li><li class="tag">Shiny</li>
         </ul>
-        <p><a class="link-arrow" href="proyectos/sistema-demografico-montilla.html">Ver caso completo<span class="visually-hidden-text">: sistema demográfico de Montilla</span></a></p>
+        <p><a class="link-arrow" href="proyectos/sistema-demografico-montilla.html">Ver caso completo<span class="visually-hidden-text">: sistema demográfico de Montilla</span></a>
+          <a class="link-gh" href="https://github.com/tomaspieroni-cloud/sistema-demografico-montilla">Código en GitHub<span class="visually-hidden-text">: sistema demográfico de Montilla</span></a></p>
       </div>
       <figure class="media-frame project-row__media">
         <img src="images/montilla/arquitectura-sistema.svg" width="800" height="500" loading="eager"
@@ -50,7 +51,8 @@ toc: false
         <ul class="tag-list" aria-label="Métodos y herramientas">
           <li class="tag">R</li><li class="tag">Python</li><li class="tag">FAMD</li><li class="tag">K-Means</li><li class="tag">IVLR</li><li class="tag">NetLogo</li>
         </ul>
-        <p><a class="link-arrow" href="proyectos/tfm-informalidad-laboral.html">Ver caso completo<span class="visually-hidden-text">: informalidad laboral en Argentina</span></a></p>
+        <p><a class="link-arrow" href="proyectos/tfm-informalidad-laboral.html">Ver caso completo<span class="visually-hidden-text">: informalidad laboral en Argentina</span></a>
+          <a class="link-gh" href="https://github.com/tomaspieroni-cloud/tfm-informalidad-laboral">Código en GitHub<span class="visually-hidden-text">: informalidad laboral en Argentina</span></a></p>
       </div>
       <figure class="media-frame project-row__media">
         <img src="images/tfm/pipeline-analitico.svg" width="800" height="500" loading="lazy"
@@ -86,7 +88,8 @@ toc: false
         <ul class="tag-list" aria-label="Métodos y herramientas">
           <li class="tag">Python</li><li class="tag">Streamlit</li><li class="tag">Pandas</li><li class="tag">Plotly</li>
         </ul>
-        <p><a class="link-arrow" href="proyectos/hipotecas-streamlit.html">Ver caso completo<span class="visually-hidden-text">: mercado hipotecario español</span></a></p>
+        <p><a class="link-arrow" href="proyectos/hipotecas-streamlit.html">Ver caso completo<span class="visually-hidden-text">: mercado hipotecario español</span></a>
+          <a class="link-gh" href="https://github.com/tomaspieroni-cloud/hipotecas-streamlit">Código en GitHub<span class="visually-hidden-text">: mercado hipotecario español</span></a></p>
       </div>
       <figure class="media-frame project-row__media">
         <img src="images/hipotecas/importe-medio-ccaa-2022.webp" width="1160" height="790" loading="lazy"
@@ -154,6 +157,7 @@ toc: false
         </ul>
       </article>
     </div>
+    <p class="more-code">Más código en GitHub: <a href="https://github.com/tomaspieroni-cloud/ejercicios-master-ciencia-datos">ejercicios del Máster en Ciencia de Datos</a> (Pandas, scikit-learn) y <a href="https://github.com/tomaspieroni-cloud/">todos mis repositorios</a>.</p>
   </div>
 </section>
 ```

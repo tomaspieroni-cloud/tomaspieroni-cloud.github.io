@@ -11,6 +11,8 @@ toc-title: "Contenido"
 ANÁLISIS Y VISUALIZACIÓN INTERACTIVA · 2026
 
 [Python]{.tag} [Streamlit]{.tag} [Pandas]{.tag} [Plotly]{.tag} [Series temporales]{.tag}
+
+[Ver código en GitHub](https://github.com/tomaspieroni-cloud/hipotecas-streamlit){.btn-tp .btn-tp--secondary}
 :::
 
 ## Resumen ejecutivo
@@ -65,5 +67,5 @@ Una aplicación que permite comparar comunidades autónomas, identificar patrone
 - Visualización con Plotly y preparación de datos con Pandas.
 
 ```{=html}
-<div class="back-link"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a></div>
+<div class="back-link btn-row"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a><a class="btn-tp btn-tp--ghost" href="https://github.com/tomaspieroni-cloud/hipotecas-streamlit">Ver código en GitHub</a></div>
 ```

@@ -943,3 +943,11 @@ button.btn-tp--secondary { color: var(--ivory-400); }
 }
 
 footer.footer .nav-footer { padding-left: max(1.25rem, calc((100% - 1280px) / 2)) !important; padding-right: max(1.25rem, calc((100% - 1280px) / 2)) !important; }
+
+/* Enlaces a GitHub */
+.link-gh { display: inline-flex; align-items: center; min-height: 44px; margin-left: 1.6rem; font-weight: 500; color: var(--text-muted); text-decoration: underline; text-decoration-color: var(--border-dark); text-underline-offset: 0.25em; }
+.link-gh:hover { color: var(--ivory-400); text-decoration-color: var(--ivory-400); }
+.more-code { margin-top: 2.5rem; color: var(--text-muted); }
+.case-meta .btn-tp { justify-self: start; margin-top: 0.3rem; }
+.back-link.btn-row { gap: 1rem; }
+@media (max-width: 767.98px) { .link-gh { margin-left: 0; } }

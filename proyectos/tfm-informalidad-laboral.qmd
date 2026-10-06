@@ -12,6 +12,8 @@ toc-location: right
 TRABAJO FIN DE MÁSTER · UNIVERSIDAD DE GRANADA · SEPTIEMBRE 2026
 
 [R]{.tag} [Python]{.tag} [Pandas]{.tag} [Scikit-learn]{.tag} [prince]{.tag} [FAMD]{.tag} [K-Means]{.tag} [NetLogo]{.tag}
+
+[Ver código en GitHub](https://github.com/tomaspieroni-cloud/tfm-informalidad-laboral){.btn-tp .btn-tp--secondary}
 :::
 
 ## Resumen ejecutivo
@@ -131,5 +133,5 @@ De ahí se desprenden algunas implicancias para la gestión: diseñar políticas
 Procesamiento y validación de microdatos a gran escala, análisis longitudinal, estadística multivariante con datos mixtos, construcción de índices, calibración empírica de simulaciones y comunicación de resultados y de sus límites.
 
 ```{=html}
-<div class="back-link"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a></div>
+<div class="back-link btn-row"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a><a class="btn-tp btn-tp--ghost" href="https://github.com/tomaspieroni-cloud/tfm-informalidad-laboral">Ver código en GitHub</a></div>
 ```

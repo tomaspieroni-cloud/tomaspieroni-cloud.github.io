@@ -43,6 +43,9 @@ website:
         aria-label: "Perfil de GitHub de Tomás Pieroni"
       - text: "tomaspieroni@gmail.com"
         href: mailto:tomaspieroni@gmail.com
+      - text: "Código del sitio"
+        href: https://github.com/tomaspieroni-cloud/tomaspieroni-cloud.github.io
+        aria-label: "Código fuente de este portfolio en GitHub"
 
 format:
   html:

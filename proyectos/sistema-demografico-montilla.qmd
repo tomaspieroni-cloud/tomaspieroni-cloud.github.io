@@ -11,6 +11,8 @@ toc-title: "Contenido"
 INTEGRACIÓN Y VISUALIZACIÓN DE DATOS · PRÁCTICAS CURRICULARES · UNIVERSIDAD DE GRANADA · AYUNTAMIENTO DE MONTILLA · MARZO – JUNIO 2026
 
 [R]{.tag} [tidyverse]{.tag} [Shiny]{.tag} [PostgreSQL]{.tag} [Docker]{.tag} [Apache Superset]{.tag} [APIs INE/IECA]{.tag}
+
+[Ver código en GitHub](https://github.com/tomaspieroni-cloud/sistema-demografico-montilla){.btn-tp .btn-tp--secondary}
 :::
 
 ## Resumen ejecutivo
@@ -68,5 +70,5 @@ Un sistema reproducible que cubre extracción, transformación, almacenamiento, 
 - Documentación técnica y comunicación con usuarios no técnicos.
 
 ```{=html}
-<div class="back-link"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a></div>
+<div class="back-link btn-row"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a><a class="btn-tp btn-tp--ghost" href="https://github.com/tomaspieroni-cloud/sistema-demografico-montilla">Ver código en GitHub</a></div>
 ```
