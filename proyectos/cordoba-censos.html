@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Análisis longitudinal de microdatos de la EPH, segmentación con FAMD y K-Means, construcción del IVLR y simulación de escenarios con un modelo basado en agentes en NetLogo.">
+<meta name="description" content="Informe en Power BI que compara los Censos 2010 y 2022 de la provincia de Córdoba (Argentina) por departamento.">
 
-<title>Informalidad laboral en Argentina · TFM · Tomás Pieroni – Tomás Pieroni</title>
+<title>Córdoba entre dos censos · Tomás Pieroni – Tomás Pieroni</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -123,23 +123,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#resumen-ejecutivo" id="toc-resumen-ejecutivo" class="nav-link active" data-scroll-target="#resumen-ejecutivo">Resumen ejecutivo</a></li>
-  <li><a href="#el-problema" id="toc-el-problema" class="nav-link" data-scroll-target="#el-problema">El problema</a></li>
-  <li><a href="#los-datos" id="toc-los-datos" class="nav-link" data-scroll-target="#los-datos">Los datos</a></li>
-  <li><a href="#pipeline-analítico" id="toc-pipeline-analítico" class="nav-link" data-scroll-target="#pipeline-analítico">Pipeline analítico</a></li>
-  <li><a href="#la-decisión-metodológica-más-importante" id="toc-la-decisión-metodológica-más-importante" class="nav-link" data-scroll-target="#la-decisión-metodológica-más-importante">La decisión metodológica más importante</a>
-  <ul class="collapse">
-  <li><a href="#segmentación-multivariante" id="toc-segmentación-multivariante" class="nav-link" data-scroll-target="#segmentación-multivariante">Segmentación multivariante</a></li>
-  <li><a href="#transiciones-laborales" id="toc-transiciones-laborales" class="nav-link" data-scroll-target="#transiciones-laborales">Transiciones laborales</a></li>
-  <li><a href="#simulación-calibrada-empíricamente" id="toc-simulación-calibrada-empíricamente" class="nav-link" data-scroll-target="#simulación-calibrada-empíricamente">Simulación calibrada empíricamente</a></li>
-  </ul></li>
-  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a>
-  <ul class="collapse">
-  <li><a href="#la-informalidad-se-compone-de-cinco-perfiles" id="toc-la-informalidad-se-compone-de-cinco-perfiles" class="nav-link" data-scroll-target="#la-informalidad-se-compone-de-cinco-perfiles">La informalidad se compone de cinco perfiles</a></li>
-  <li><a href="#la-vulnerabilidad-relativa-condiciona-las-transiciones" id="toc-la-vulnerabilidad-relativa-condiciona-las-transiciones" class="nav-link" data-scroll-target="#la-vulnerabilidad-relativa-condiciona-las-transiciones">La vulnerabilidad relativa condiciona las transiciones</a></li>
-  <li><a href="#escenarios-simulados" id="toc-escenarios-simulados" class="nav-link" data-scroll-target="#escenarios-simulados">Escenarios simulados</a></li>
-  </ul></li>
-  <li><a href="#interpretación" id="toc-interpretación" class="nav-link" data-scroll-target="#interpretación">Interpretación</a></li>
-  <li><a href="#limitaciones-e-interpretación-responsable" id="toc-limitaciones-e-interpretación-responsable" class="nav-link" data-scroll-target="#limitaciones-e-interpretación-responsable">Limitaciones e interpretación responsable</a></li>
+  <li><a href="#las-preguntas" id="toc-las-preguntas" class="nav-link" data-scroll-target="#las-preguntas">Las preguntas</a></li>
+  <li><a href="#qué-hice-específicamente" id="toc-qué-hice-específicamente" class="nav-link" data-scroll-target="#qué-hice-específicamente">Qué hice específicamente</a></li>
+  <li><a href="#resumen-por-censo" id="toc-resumen-por-censo" class="nav-link" data-scroll-target="#resumen-por-censo">Resumen por censo</a></li>
+  <li><a href="#dónde-creció-la-población" id="toc-dónde-creció-la-población" class="nav-link" data-scroll-target="#dónde-creció-la-población">Dónde creció la población</a></li>
+  <li><a href="#servicios-básicos" id="toc-servicios-básicos" class="nav-link" data-scroll-target="#servicios-básicos">Servicios básicos</a></li>
+  <li><a href="#limitaciones" id="toc-limitaciones" class="nav-link" data-scroll-target="#limitaciones">Limitaciones</a></li>
   <li><a href="#habilidades-demostradas" id="toc-habilidades-demostradas" class="nav-link" data-scroll-target="#habilidades-demostradas">Habilidades demostradas</a></li>
   </ul>
 </nav>
@@ -149,13 +138,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Informalidad laboral en Argentina</h1>
-<p class="subtitle lead">Transiciones, segmentación y simulación basada en agentes con calibración empírica (2022–2025)</p>
+<h1 class="title">Córdoba entre dos censos</h1>
+<p class="subtitle lead">Indicadores demográficos y territoriales de los Censos 2010 y 2022 en Power BI</p>
 </div>
 
 <div>
   <div class="description">
-    Análisis longitudinal de microdatos de la EPH, segmentación con FAMD y K-Means, construcción del IVLR y simulación de escenarios con un modelo basado en agentes en NetLogo.
+    Informe en Power BI que compara los Censos 2010 y 2022 de la provincia de Córdoba (Argentina) por departamento.
   </div>
 </div>
 
@@ -173,132 +162,95 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="case-meta">
-<p>TRABAJO FIN DE MÁSTER · UNIVERSIDAD DE GRANADA · SEPTIEMBRE 2026</p>
-<p><span class="tag">R</span> <span class="tag">Python</span> <span class="tag">Pandas</span> <span class="tag">Scikit-learn</span> <span class="tag">prince</span> <span class="tag">FAMD</span> <span class="tag">K-Means</span> <span class="tag">NetLogo</span></p>
+<p>POWER BI · INDICADORES · ANÁLISIS TERRITORIAL</p>
+<p><span class="tag">Power BI</span> <span class="tag">Modelo de datos</span> <span class="tag">Indicadores</span> <span class="tag">Árboles de descomposición</span> <span class="tag">Datos censales</span></p>
 </div>
 <section id="resumen-ejecutivo" class="level2">
 <h2 data-anchor-id="resumen-ejecutivo">Resumen ejecutivo</h2>
-<div class="exec-summary" role="group" aria-label="Resumen del proyecto">
-  <div><span class="mono-label">PREGUNTA</span><p>¿Cómo reaccionan los distintos perfiles de trabajadores informales ante shocks económicos e institucionales en Argentina?</p></div>
-  <div><span class="mono-label">DATOS</span><p>759.264 registros de 16 bases trimestrales de la EPH (2022T1–2025T4), con un panel de 283.246 enlaces.</p></div>
-  <div><span class="mono-label">MÉTODO</span><p>FAMD y K-Means para los perfiles, IVLR para la vulnerabilidad relativa y un modelo basado en agentes calibrado con transiciones observadas.</p></div>
-  <div><span class="mono-label">HALLAZGO</span><p>Cinco perfiles de informalidad; en el cuartil más vulnerable la formalización es casi cuatro veces menor, y en los escenarios simulados la informalidad absorbe gran parte del ajuste.</p></div>
+<p><span class="lede">Un informe en Power BI que compara los Censos Nacionales de Población, Hogares y Viviendas de 2010 y 2022 en la provincia de Córdoba (Argentina), departamento por departamento, para ver dónde creció la población, cómo cambió su estructura por edad y cómo evolucionó el acceso a servicios básicos.</span></p>
+<div class="stat-row">
+<div>
+<p><span class="v">3,31 → 3,84 M</span> <span class="k">habitantes en 2010 y en 2022 (+16 %)</span></p>
 </div>
-<p class="callout-note-tp">La simulación explora escenarios y analiza mecanismos: no pronostica ni predice resultados individuales.</p>
+<div>
+<p><span class="v">45,6 → 59,4</span> <span class="k">índice de envejecimiento</span></p>
+</div>
+<div>
+<p><span class="v">11,6 → 13,0 %</span> <span class="k">población de 65 años y más</span></p>
+</div>
+</div>
 </section>
-<section id="el-problema" class="level2">
-<h2 data-anchor-id="el-problema">El problema</h2>
-<p>En el cuarto trimestre de 2025, más de cuatro de cada diez personas ocupadas en los aglomerados urbanos de Argentina tenían un empleo informal. Pero esa tasa agregada reúne situaciones muy distintas: asalariados no registrados, cuentapropistas vulnerables y trabajadores de subsistencia conviven bajo el mismo indicador, con niveles de estabilidad y protección muy desiguales.</p>
-<p>La pregunta central del trabajo fue cómo reaccionan los distintos perfiles de trabajadores informales ante shocks económicos e institucionales. Responderla exige mirar dentro de la informalidad: qué tipos de inserción la componen, cómo se mueven las personas entre situaciones laborales y quiénes absorben el ajuste.</p>
-</section>
-<section id="los-datos" class="level2">
-<h2 data-anchor-id="los-datos">Los datos</h2>
-<p>El proyecto utiliza microdatos de la Encuesta Permanente de Hogares (EPH-INDEC), representativa de la población urbana de los 31 aglomerados relevados. La ventana de 16 trimestres coincide con un periodo de alta inflación y devaluaciones.</p>
-<p>La base analítica se construyó mediante:</p>
+<section id="las-preguntas" class="level2">
+<h2 data-anchor-id="las-preguntas">Las preguntas</h2>
 <ul>
-<li>integración y validación de 759.264 registros y 240 variables;</li>
-<li>homogeneización de variables y categorías entre periodos;</li>
-<li>clasificación de las situaciones de formalidad laboral;</li>
-<li>enlace del panel rotativo: 283.246 enlaces consistentes y 128.427 con estados válidos en la ventana principal;</li>
-<li>tratamiento explícito de valores faltantes: los ingresos no respondidos se trataron como faltantes y los declarados en cero se conservaron como observaciones válidas.</li>
+<li>¿Qué departamentos concentraron el crecimiento de la población entre 2010 y 2022?</li>
+<li>¿Cómo cambiaron la estructura por edad, el envejecimiento y la densidad?</li>
+<li>¿Cómo evolucionó el acceso a vivienda propia, agua corriente y cloacas en cada departamento?</li>
 </ul>
 </section>
-<section id="pipeline-analítico" class="level2">
-<h2 data-anchor-id="pipeline-analítico">Pipeline analítico</h2>
-<p>Diseñé e implementé el pipeline completo: procesamiento en R, perfiles y calibración en Python, y simulación en NetLogo.</p>
-<ol class="process-full" aria-label="Etapas del pipeline analítico">
-  <li><span class="step-n">datos</span><strong>Datos EPH</strong><span class="note">16 bases trimestrales integradas y validadas.</span></li>
-  <li><span class="step-n">clasificación</span><strong>Clasificación de formalidad</strong><span class="note">Situación laboral de cada persona ocupada.</span></li>
-  <li><span class="step-n">panel</span><strong>Panel longitudinal</strong><span class="note">Enlace de las mismas personas entre trimestres.</span></li>
-  <li><span class="step-n">transiciones</span><strong>Transiciones laborales</strong><span class="note">Cambios entre formalidad, informalidad, desocupación e inactividad.</span></li>
-  <li><span class="step-n">reducción</span><strong>FAMD</strong><span class="note">Variables numéricas y categóricas en un mismo espacio.</span></li>
-  <li><span class="step-n">segmentación</span><strong>Clustering K-Means</strong><span class="note">Cinco perfiles estables (ARI &gt; 0,999).</span></li>
-  <li><span class="step-n">índice</span><strong>IVLR</strong><span class="note">Ingreso relativo, intensidad laboral y privación educativa.</span></li>
-  <li><span class="step-n">calibración</span><strong>Matrices de transición</strong><span class="note">Probabilidades observadas por perfil y nivel de vulnerabilidad.</span></li>
-  <li class="is-sim"><span class="step-n">simulación</span><strong>Modelo basado en agentes</strong><span class="note">NetLogo, población inicial observada en 2023T4.</span></li>
-  <li class="is-sim"><span class="step-n">escenarios</span><strong>Simulación de escenarios</strong><span class="note">Shock inflacionario, devaluatorio y combinado; 100 réplicas por escenario.</span></li>
-  <li class="is-sim"><span class="step-n">interpretación</span><strong>Análisis de mecanismos</strong><span class="note">Cómo se distribuye el ajuste entre estados laborales.</span></li>
+<section id="qué-hice-específicamente" class="level2">
+<h2 data-anchor-id="qué-hice-específicamente">Qué hice específicamente</h2>
+<ol type="1">
+<li>Preparé y relacioné las tablas de ambos censos por departamento.</li>
+<li>Construí indicadores de variación relativa de población, densidad, población de 65 años y más, vivienda propia y acceso a servicios.</li>
+<li>Diseñé seis páginas: un resumen por censo, árboles de descomposición, el análisis de la variación de población, un anexo por departamento con segmentación por tamaño y una página de servicios básicos.</li>
 </ol>
-<p>Las tres últimas etapas, marcadas como simuladas, producen resultados del modelo; el resto trabaja con datos observados.</p>
 </section>
-<section id="la-decisión-metodológica-más-importante" class="level2">
-<h2 data-anchor-id="la-decisión-metodológica-más-importante">La decisión metodológica más importante</h2>
-<p>La principal decisión fue no tratar la informalidad como una etiqueta aislada ni reducir el proyecto a una clasificación individual. El análisis se organizó en tres niveles complementarios.</p>
-<section id="segmentación-multivariante" class="level3">
-<h3 data-anchor-id="segmentación-multivariante">Segmentación multivariante</h3>
-<p>FAMD permite combinar variables numéricas y categóricas en un mismo espacio, y K-Means sobre ese espacio identifica perfiles sin imponer de antemano categorías de vulnerabilidad. La solución resultó interpretable y muy estable.</p>
-</section>
-<section id="transiciones-laborales" class="level3">
-<h3 data-anchor-id="transiciones-laborales">Transiciones laborales</h3>
-<p>El panel rotativo permite observar qué ocurre con las mismas personas de un trimestre al siguiente y superar una lectura exclusivamente transversal.</p>
-</section>
-<section id="simulación-calibrada-empíricamente" class="level3">
-<h3 data-anchor-id="simulación-calibrada-empíricamente">Simulación calibrada empíricamente</h3>
-<p>Los perfiles, el IVLR y las matrices de transición observadas calibran el modelo basado en agentes. Así, la simulación queda vinculada con patrones de los microdatos en lugar de depender solo de supuestos teóricos.</p>
-</section>
-</section>
-<section id="resultados" class="level2">
-<h2 data-anchor-id="resultados">Resultados</h2>
-<section id="la-informalidad-se-compone-de-cinco-perfiles" class="level3">
-<h3 data-anchor-id="la-informalidad-se-compone-de-cinco-perfiles">La informalidad se compone de cinco perfiles</h3>
+<section id="resumen-por-censo" class="level2">
+<h2 data-anchor-id="resumen-por-censo">Resumen por censo</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/tfm/perfiles-informalidad.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Los perfiles difieren en categoría ocupacional, tamaño del establecimiento, edad, rama e intensidad laboral: el empleo informal no puede representarse con un único trabajador promedio."><img src="../images/tfm/perfiles-informalidad.svg" class="img-fluid figure-img" alt="Gráfico de barras horizontales con la distribución del empleo informal en cinco perfiles: cuentapropismo unipersonal 30,21 %, asalariados informales jóvenes 27,11 %, inserciones mixtas en pequeños establecimientos 24,27 %, asalariados en hogares particulares 11,57 % y asalariados en establecimientos grandes 6,84 %."></a></p>
-<figcaption>Los perfiles difieren en categoría ocupacional, tamaño del establecimiento, edad, rama e intensidad laboral: el empleo informal no puede representarse con un único trabajador promedio.</figcaption>
+<p><a href="../images/cordoba-censos/resumen-censo-2010.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Resumen del Censo 2010."><img src="../images/cordoba-censos/resumen-censo-2010.webp" class="figure-light img-fluid figure-img" alt="Página de resumen del Censo 2010: 49 mil personas nacidas en otros países, 11,6 % de población de 65 años y más, índice de envejecimiento de 45,6, 105 habitantes por kilómetro cuadrado, población por departamento y por sexo y tabla por grupos de edad."></a></p>
+<figcaption>Resumen del Censo 2010.</figcaption>
 </figure>
-</div>
-</section>
-<section id="la-vulnerabilidad-relativa-condiciona-las-transiciones" class="level3">
-<h3 data-anchor-id="la-vulnerabilidad-relativa-condiciona-las-transiciones">La vulnerabilidad relativa condiciona las transiciones</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../images/tfm/transiciones-ivlr.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Entre quienes tienen mayor vulnerabilidad relativa (Q4), la formalización en el trimestre siguiente es casi cuatro veces menor que en Q1, y las salidas hacia desocupación e inactividad se triplican."><img src="../images/tfm/transiciones-ivlr.svg" class="img-fluid figure-img" alt="Gráfico de barras agrupadas que compara transiciones desde la informalidad entre el primer y el cuarto cuartil del IVLR: formalización 19,11 % frente a 5,11 %, desocupación 3,46 % frente a 10,54 % e inactividad 6,33 % frente a 18,04 %."></a></p>
-<figcaption>Entre quienes tienen mayor vulnerabilidad relativa (Q4), la formalización en el trimestre siguiente es casi cuatro veces menor que en Q1, y las salidas hacia desocupación e inactividad se triplican.</figcaption>
-</figure>
-</div>
-</section>
-<section id="escenarios-simulados" class="level3">
-<h3 data-anchor-id="escenarios-simulados">Escenarios simulados</h3>
-<p>Cambio en la formalidad frente al escenario base, en puntos porcentuales. Son resultados de la simulación, no observaciones.</p>
-<div class="stat-row is-sim">
-<div>
-<p><span class="v">−2,31 pp</span> <span class="k">Escenario inflacionario moderado</span></p>
-</div>
-<div>
-<p><span class="v">−1,2 pp</span> <span class="k">Escenario devaluatorio</span></p>
-</div>
-<div>
-<p><span class="v">−3,75 pp</span> <span class="k">Escenario combinado, en su pico</span></p>
-</div>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../images/tfm/escenario-combinado-abm.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="En el escenario combinado, la caída de la formalidad no se traduce principalmente en desempleo: el empleo informal absorbe la mayor parte del deterioro dentro de los supuestos del modelo."><img src="../images/tfm/escenario-combinado-abm.svg" class="img-fluid figure-img" alt="Gráfico de barras divergentes con el cambio simulado frente al escenario base en el escenario combinado: formalidad −3,8 puntos, informalidad +4,6, desocupación +0,1 e inactividad −1,0."></a></p>
-<figcaption>En el escenario combinado, la caída de la formalidad no se traduce principalmente en desempleo: el empleo informal absorbe la mayor parte del deterioro dentro de los supuestos del modelo.</figcaption>
+<p><a href="../images/cordoba-censos/resumen-censo-2022.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Resumen del Censo 2022."><img src="../images/cordoba-censos/resumen-censo-2022.webp" class="figure-light img-fluid figure-img" alt="Página de resumen del Censo 2022: 66 mil personas nacidas en otros países, 13,0 % de población de 65 años y más, índice de envejecimiento de 59,4, 120 habitantes por kilómetro cuadrado, población por departamento y por sexo y tabla por grupos de edad."></a></p>
+<figcaption>Resumen del Censo 2022.</figcaption>
+</figure>
+</div>
+<p>Fuente: INDEC, Censos Nacionales de Población, Hogares y Viviendas 2010 y 2022. Unidad: departamentos de la provincia de Córdoba.</p>
+</section>
+<section id="dónde-creció-la-población" class="level2">
+<h2 data-anchor-id="dónde-creció-la-población">Dónde creció la población</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/cordoba-censos/variacion-poblacion-departamentos.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Población por departamento en 2010 y 2022 (barras) y variación relativa (línea). Los mayores crecimientos relativos no están en la Capital sino en departamentos como Santa María, Calamuchita y Colón. Fuente: INDEC, Censos 2010 y 2022."><img src="../images/cordoba-censos/variacion-poblacion-departamentos.webp" class="figure-light img-fluid figure-img" alt="Gráfico combinado con la población de cada departamento en 2010 y 2022 en barras y la variación relativa en una línea; la línea alcanza sus máximos en Santa María, cerca de 47 %, Calamuchita y Colón, y baja de cero en Pocho."></a></p>
+<figcaption>Población por departamento en 2010 y 2022 (barras) y variación relativa (línea). Los mayores crecimientos relativos no están en la Capital sino en departamentos como Santa María, Calamuchita y Colón. Fuente: INDEC, Censos 2010 y 2022.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/cordoba-censos/tabla-variaciones-relativas.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Departamentos ordenados por variación relativa de población: Santa María (+47,5 %), Calamuchita (+38,7 %), Colón (+31,3 %), Río Primero (+25,2 %) y Punilla (+24,0 %). Fuente: INDEC, Censos 2010 y 2022."><img src="../images/cordoba-censos/tabla-variaciones-relativas.webp" class="figure-light img-fluid figure-img" alt="Tabla con la variación relativa de población, de densidad y de población de 65 años y más por departamento, encabezada por Santa María, Calamuchita, Colón, Río Primero y Punilla."></a></p>
+<figcaption>Departamentos ordenados por variación relativa de población: Santa María (+47,5 %), Calamuchita (+38,7 %), Colón (+31,3 %), Río Primero (+25,2 %) y Punilla (+24,0 %). Fuente: INDEC, Censos 2010 y 2022.</figcaption>
 </figure>
 </div>
 </section>
+<section id="servicios-básicos" class="level2">
+<h2 data-anchor-id="servicios-básicos">Servicios básicos</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/cordoba-censos/servicios-basicos-2010-2022.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Población con agua corriente y con cloacas en 2010 y 2022 por departamento. Fuente: INDEC, Censos 2010 y 2022."><img src="../images/cordoba-censos/servicios-basicos-2010-2022.webp" class="figure-light img-fluid figure-img" alt="Dos gráficos que comparan, por departamento, la población con agua corriente y la población con cloacas en 2010 y 2022, con la Capital muy por encima del resto."></a></p>
+<figcaption>Población con agua corriente y con cloacas en 2010 y 2022 por departamento. Fuente: INDEC, Censos 2010 y 2022.</figcaption>
+</figure>
+</div>
 </section>
-<section id="interpretación" class="level2">
-<h2 data-anchor-id="interpretación">Interpretación</h2>
-<p>El mecanismo que emerge es una amortiguación precaria: ante un shock, la formalización se frena, una parte del ajuste no se transforma en desempleo abierto y se desplaza hacia la informalidad, lo que consolida inserciones con menor protección. Absorber el ajuste no equivale a mejorar la calidad del empleo.</p>
-<p>De ahí se desprenden algunas implicancias para la gestión: diseñar políticas diferenciadas por perfil, priorizar las trayectorias más vulnerables, medir flujos y no solo stocks, y usar los perfiles y el IVLR como criterios exploratorios para focalizar y evaluar escenarios antes de implementar medidas.</p>
-</section>
-<section id="limitaciones-e-interpretación-responsable" class="level2">
-<h2 data-anchor-id="limitaciones-e-interpretación-responsable">Limitaciones e interpretación responsable</h2>
+<section id="limitaciones" class="level2">
+<h2 data-anchor-id="limitaciones">Limitaciones</h2>
 <ul>
-<li>La EPH cubre 31 aglomerados urbanos: los resultados no incluyen el empleo rural.</li>
-<li>La formalidad completa de los trabajadores independientes está disponible desde 2023T4.</li>
-<li>El panel rotativo permite enlaces de corto plazo, no trayectorias de vida completas.</li>
-<li>El clustering identifica estructuras relativas dentro de los datos analizados, y el IVLR permite comparaciones internas, no una medida universal.</li>
-<li>El ABM actualiza estados laborales, pero no incorpora demanda explícita de empresas, salarios ni cambios endógenos en el IVLR.</li>
-<li>Los escenarios expresan consecuencias de los supuestos programados: sirven para comparar mecanismos, no son pronósticos ni efectos causales directos.</li>
-<li>Los resultados agregados no deben utilizarse para determinar el futuro laboral de personas concretas.</li>
+<li>La comparación entre censos debe considerar los cambios metodológicos entre 2010 y 2022, como el paso de un censo de hecho a uno de derecho.</li>
+<li>Los indicadores son agregados departamentales: no describen diferencias dentro de cada departamento.</li>
+<li>La variación relativa amplifica los cambios en departamentos poco poblados; conviene leerla junto con la variación absoluta.</li>
 </ul>
 </section>
 <section id="habilidades-demostradas" class="level2">
 <h2 data-anchor-id="habilidades-demostradas">Habilidades demostradas</h2>
-<p>Procesamiento y validación de microdatos a gran escala, análisis longitudinal, estadística multivariante con datos mixtos, construcción de índices, calibración empírica de simulaciones y comunicación de resultados y de sus límites.</p>
+<ul>
+<li>Modelado de datos y construcción de indicadores en Power BI.</li>
+<li>Diseño de informes para la exploración territorial.</li>
+<li>Lectura crítica de fuentes censales.</li>
+</ul>
 <div class="back-link"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a></div>
 
 

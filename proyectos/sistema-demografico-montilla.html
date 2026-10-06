@@ -8,7 +8,7 @@
 
 <meta name="description" content="ETL en R, PostgreSQL, Docker y un dashboard interactivo en Shiny para apoyar el análisis demográfico del Ayuntamiento de Montilla.">
 
-<title>Sistema de Análisis Demográfico Municipal – Tomás Pieroni</title>
+<title>Sistema demográfico de Montilla · Tomás Pieroni – Tomás Pieroni</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,34 +32,21 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d0cfe7a3482e0d49a74229a8f3b76718.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -90,12 +77,11 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Tomás Pieroni</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Abrir o cerrar el menú" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Inicio</span></a>
@@ -139,13 +125,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#resumen-ejecutivo" id="toc-resumen-ejecutivo" class="nav-link active" data-scroll-target="#resumen-ejecutivo">Resumen ejecutivo</a></li>
   <li><a href="#el-problema" id="toc-el-problema" class="nav-link" data-scroll-target="#el-problema">El problema</a></li>
   <li><a href="#los-datos" id="toc-los-datos" class="nav-link" data-scroll-target="#los-datos">Los datos</a></li>
-  <li><a href="#qué-hice-específicamente" id="toc-qué-hice-específicamente" class="nav-link" data-scroll-target="#qué-hice-específicamente">Qué hice específicamente</a></li>
   <li><a href="#arquitectura" id="toc-arquitectura" class="nav-link" data-scroll-target="#arquitectura">Arquitectura</a></li>
+  <li><a href="#qué-hice-específicamente" id="toc-qué-hice-específicamente" class="nav-link" data-scroll-target="#qué-hice-específicamente">Qué hice específicamente</a></li>
+  <li><a href="#el-dashboard" id="toc-el-dashboard" class="nav-link" data-scroll-target="#el-dashboard">El dashboard</a></li>
   <li><a href="#decisión-metodológica-principal" id="toc-decisión-metodológica-principal" class="nav-link" data-scroll-target="#decisión-metodológica-principal">Decisión metodológica principal</a></li>
   <li><a href="#resultado" id="toc-resultado" class="nav-link" data-scroll-target="#resultado">Resultado</a></li>
   <li><a href="#limitaciones" id="toc-limitaciones" class="nav-link" data-scroll-target="#limitaciones">Limitaciones</a></li>
   <li><a href="#habilidades-demostradas" id="toc-habilidades-demostradas" class="nav-link" data-scroll-target="#habilidades-demostradas">Habilidades demostradas</a></li>
-  <li><a href="#tecnologías" id="toc-tecnologías" class="nav-link" data-scroll-target="#tecnologías">Tecnologías</a></li>
   </ul>
 </nav>
     </div>
@@ -155,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Sistema de Análisis Demográfico Municipal</h1>
-<p class="subtitle lead">Una solución de datos de extremo a extremo para el Ayuntamiento de Montilla</p>
+<p class="subtitle lead">Integración de fuentes, ETL, modelado relacional, despliegue y visualización de datos para el Ayuntamiento de Montilla</p>
 </div>
 
 <div>
@@ -177,69 +163,83 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Prácticas curriculares · Universidad de Granada · Ayuntamiento de Montilla</strong></p>
-<p><code>R</code> <code>Shiny</code> <code>PostgreSQL</code> <code>ETL</code> <code>Docker</code> <code>APIs</code></p>
+<div class="case-meta">
+<p>INTEGRACIÓN Y VISUALIZACIÓN DE DATOS · PRÁCTICAS CURRICULARES · UNIVERSIDAD DE GRANADA · AYUNTAMIENTO DE MONTILLA · MARZO – JUNIO 2026</p>
+<p><span class="tag">R</span> <span class="tag">tidyverse</span> <span class="tag">Shiny</span> <span class="tag">PostgreSQL</span> <span class="tag">Docker</span> <span class="tag">Apache Superset</span> <span class="tag">APIs INE/IECA</span></p>
+</div>
 <section id="resumen-ejecutivo" class="level2">
-<h2 class="anchored" data-anchor-id="resumen-ejecutivo">Resumen ejecutivo</h2>
-<p>Este proyecto desarrolla una solución de datos de extremo a extremo para transformar información demográfica dispersa en una herramienta accesible para la gestión municipal. La solución integra datos de fuentes públicas oficiales, los estructura en un modelo relacional y los expone mediante un dashboard interactivo.</p>
+<h2 data-anchor-id="resumen-ejecutivo">Resumen ejecutivo</h2>
+<p><span class="lede">Una solución de datos de extremo a extremo para integrar fuentes demográficas dispersas y facilitar su análisis por parte de usuarios municipales. Desarrollé procesos ETL en R desde APIs públicas del INE y del IECA, diseñé una base relacional en PostgreSQL y desplegué PostgreSQL y Shiny Server mediante Docker sobre Ubuntu. La solución incluyó un dashboard interactivo, diccionario de datos, documentación técnica y manual de usuario.</span></p>
 </section>
 <section id="el-problema" class="level2">
-<h2 class="anchored" data-anchor-id="el-problema">El problema</h2>
-<p>El Ayuntamiento de Montilla trabaja con información procedente de múltiples fuentes estadísticas oficiales (INE, IECA, SEPE) que históricamente han permanecido dispersas y sin integrar. La planificación de servicios sociales, la atención a mayores y las políticas de atracción de población joven requerían disponer de evidencia sistematizada.</p>
+<h2 data-anchor-id="el-problema">El problema</h2>
+<p>El Ayuntamiento de Montilla trabaja con información procedente de varias fuentes estadísticas oficiales (INE, IECA y SEPE) que históricamente estaban dispersas y sin integrar. La planificación de servicios sociales, la atención a las personas mayores y las políticas de atracción de población joven necesitaban evidencia sistematizada y actualizable.</p>
 </section>
 <section id="los-datos" class="level2">
-<h2 class="anchored" data-anchor-id="los-datos">Los datos</h2>
-<p>El sistema integra series históricas de población, estructura por edades, indicadores de envejecimiento, dependencia, migración y paro registrado, provenientes de APIs públicas del INE y del IECA.</p>
-</section>
-<section id="qué-hice-específicamente" class="level2">
-<h2 class="anchored" data-anchor-id="qué-hice-específicamente">Qué hice específicamente</h2>
-<p>Diseñé e implementé la totalidad del proyecto:</p>
-<ol type="1">
-<li>Extracción y transformación mediante procesos ETL en R desde APIs públicas.</li>
-<li>Diseño del modelo relacional en PostgreSQL.</li>
-<li>Despliegue de PostgreSQL y Shiny Server en contenedores Docker.</li>
-<li>Desarrollo del dashboard interactivo en Shiny.</li>
-<li>Exploración adicional con Apache Superset.</li>
-<li>Elaboración de diccionario de datos, documentación técnica y manual de usuario.</li>
-</ol>
+<h2 data-anchor-id="los-datos">Los datos</h2>
+<p>El sistema integra series históricas de población, estructura por edades, envejecimiento, dependencia, crecimiento natural, migraciones y paro registrado, obtenidas de APIs públicas del INE y del IECA y de portales de datos abiertos.</p>
 </section>
 <section id="arquitectura" class="level2">
-<h2 class="anchored" data-anchor-id="arquitectura">Arquitectura</h2>
-<p><strong>APIs públicas (INE, IECA)</strong> → <strong>ETL en R</strong> → <strong>PostgreSQL</strong> → <strong>Shiny / Apache Superset</strong> → <strong>Usuario final</strong></p>
-<p>Todo el sistema se orquesta con <strong>Docker Compose</strong>, lo que garantiza portabilidad y reproducibilidad del entorno completo.</p>
+<h2 data-anchor-id="arquitectura">Arquitectura</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/montilla/arquitectura-sistema.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Todo el sistema se orquesta con Docker Compose, lo que garantiza la portabilidad y la reproducibilidad del entorno completo."><img src="../images/montilla/arquitectura-sistema.svg" class="img-fluid figure-img" alt="Diagrama de arquitectura: APIs públicas del INE, IECA y SEPE alimentan un proceso ETL en R que carga una base PostgreSQL; desde ella consultan un dashboard en Shiny y Apache Superset, dentro de un entorno Docker Compose sobre Ubuntu."></a></p>
+<figcaption>Todo el sistema se orquesta con Docker Compose, lo que garantiza la portabilidad y la reproducibilidad del entorno completo.</figcaption>
+</figure>
+</div>
+</section>
+<section id="qué-hice-específicamente" class="level2">
+<h2 data-anchor-id="qué-hice-específicamente">Qué hice específicamente</h2>
+<p>Diseñé e implementé la totalidad del proyecto:</p>
+<ol type="1">
+<li>Extracción y transformación con procesos ETL en R desde APIs públicas.</li>
+<li>Diseño del modelo relacional en PostgreSQL.</li>
+<li>Despliegue de PostgreSQL y Shiny Server en contenedores Docker sobre Ubuntu.</li>
+<li>Desarrollo del dashboard interactivo en Shiny.</li>
+<li>Exploración de Apache Superset como entorno alternativo de consulta.</li>
+<li>Diccionario de datos, documentación técnica, manual de usuario y presentación ejecutiva.</li>
+</ol>
+</section>
+<section id="el-dashboard" class="level2">
+<h2 data-anchor-id="el-dashboard">El dashboard</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/montilla/dashboard-shiny-atraccion.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Pestaña de atracción de población del dashboard en Shiny entregado. El usuario elige la fuente de cada serie; la línea discontinua marca 2021, el año de solapamiento entre fuentes. Fuente: INE (Padrón y Censo) e IECA. Periodo: 2003–2024. Datos consultados durante el desarrollo, marzo–junio de 2026."><img src="../images/montilla/dashboard-shiny-atraccion.webp" class="figure-light img-fluid figure-img" alt="Captura del dashboard en Shiny con pestañas temáticas y dos gráficos: el porcentaje de población joven de 15 a 29 años, en descenso desde cerca del 21 % hasta algo más del 16 %, y el saldo migratorio anual en personas, con una línea vertical en 2021 que separa las fuentes IECA e INE."></a></p>
+<figcaption>Pestaña de atracción de población del dashboard en Shiny entregado. El usuario elige la fuente de cada serie; la línea discontinua marca 2021, el año de solapamiento entre fuentes. Fuente: INE (Padrón y Censo) e IECA. Periodo: 2003–2024. Datos consultados durante el desarrollo, marzo–junio de 2026.</figcaption>
+</figure>
+</div>
 </section>
 <section id="decisión-metodológica-principal" class="level2">
-<h2 class="anchored" data-anchor-id="decisión-metodológica-principal">Decisión metodológica principal</h2>
-<p>La decisión más importante fue <strong>no ocultar las discrepancias entre fuentes</strong>. Cuando INE e IECA ofrecen series con metodologías distintas, el sistema las muestra por separado y documenta la diferencia, en lugar de imponer una reconciliación que perdería información sobre la producción estadística.</p>
+<h2 data-anchor-id="decisión-metodológica-principal">Decisión metodológica principal</h2>
+<p>La decisión más importante fue <strong>no ocultar las discrepancias entre fuentes</strong>. Cuando el INE y el IECA ofrecen series con criterios distintos, el sistema las muestra por separado y documenta la diferencia, en lugar de imponer una reconciliación que perdería información sobre cómo se produce cada estadística.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/montilla/superset-migracion-paro.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Vista de exploración en Apache Superset. La discontinuidad de 2021 en el saldo migratorio coincide con el cambio de fuente y con diferencias metodológicas entre las series. Fuentes: INE e IECA (saldo migratorio, 2003–2024) y SEPE (paro registrado, 2009–2025). Datos consultados durante el desarrollo, marzo–junio de 2026."><img src="../images/montilla/superset-migracion-paro.webp" class="img-fluid figure-img" alt="Dos gráficos de Apache Superset sobre fondo oscuro: la tasa de saldo migratorio entre 2003 y 2024, con las series del INE y del IECA diferenciadas, y el paro registrado por sexo entre 2009 y 2025, con más mujeres que hombres en paro durante todo el periodo."></a></p>
+<figcaption>Vista de exploración en Apache Superset. La discontinuidad de 2021 en el saldo migratorio coincide con el cambio de fuente y con diferencias metodológicas entre las series. Fuentes: INE e IECA (saldo migratorio, 2003–2024) y SEPE (paro registrado, 2009–2025). Datos consultados durante el desarrollo, marzo–junio de 2026.</figcaption>
+</figure>
+</div>
 </section>
 <section id="resultado" class="level2">
-<h2 class="anchored" data-anchor-id="resultado">Resultado</h2>
+<h2 data-anchor-id="resultado">Resultado</h2>
 <p>Un sistema reproducible que cubre extracción, transformación, almacenamiento, análisis, visualización, despliegue y documentación, entregado a la entidad con manual de usuario y diccionario de datos.</p>
 </section>
 <section id="limitaciones" class="level2">
-<h2 class="anchored" data-anchor-id="limitaciones">Limitaciones</h2>
+<h2 data-anchor-id="limitaciones">Limitaciones</h2>
 <ul>
 <li>La cobertura temporal depende de la disponibilidad de cada serie en las fuentes originales.</li>
 <li>Algunas series requieren controles manuales de consistencia entre fuentes.</li>
-<li>El sistema está diseñado para un municipio; su extensión a otros requiere revisar las correspondencias geográficas.</li>
+<li>El sistema está pensado para un municipio; extenderlo a otros exige revisar las correspondencias geográficas.</li>
 </ul>
 </section>
 <section id="habilidades-demostradas" class="level2">
-<h2 class="anchored" data-anchor-id="habilidades-demostradas">Habilidades demostradas</h2>
+<h2 data-anchor-id="habilidades-demostradas">Habilidades demostradas</h2>
 <ul>
-<li>Ingeniería de datos end-to-end.</li>
-<li>Diseño de bases de datos relacionales.</li>
-<li>Construcción de aplicaciones Shiny con lógica reactiva.</li>
+<li>Integración de fuentes, ETL, modelado relacional, despliegue y visualización de datos.</li>
+<li>Aplicaciones Shiny con lógica reactiva.</li>
 <li>Orquestación de contenedores con Docker Compose.</li>
 <li>Documentación técnica y comunicación con usuarios no técnicos.</li>
 </ul>
-</section>
-<section id="tecnologías" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologías">Tecnologías</h2>
-<p><code>R</code> · <code>tidyverse</code> · <code>Shiny</code> · <code>PostgreSQL</code> · <code>Apache Superset</code> · <code>Docker</code> · <code>APIs INE/IECA</code></p>
-<hr>
-<p><em>Página completa en preparación.</em></p>
-<p><a href="../proyectos.html" class="btn btn-outline-primary">← Volver a Proyectos</a></p>
+<div class="back-link"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a></div>
 
 
 </section>
@@ -247,13 +247,6 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -332,6 +325,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -646,6 +644,67 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><strong>Tomás Nelio Pieroni</strong> · Data Analyst<br> Granada, España · Ciudadano UE · © 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/in/tomas-pieroni/">
+<p>LinkedIn</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/tomaspieroni-cloud">
+<p>GitHub</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:tomaspieroni@gmail.com">
+<p>tomaspieroni@gmail.com</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

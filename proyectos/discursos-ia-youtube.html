@@ -8,7 +8,7 @@
 
 <meta name="description" content="Análisis de 6.804 comentarios de YouTube mediante detección de idioma, sentimiento léxico, LDA y redes semánticas de coocurrencia.">
 
-<title>Dos idiomas, dos conversaciones sobre inteligencia artificial – Tomás Pieroni</title>
+<title>Discursos sobre IA en YouTube · Tomás Pieroni – Tomás Pieroni</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,34 +32,21 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d0cfe7a3482e0d49a74229a8f3b76718.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -90,12 +77,11 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Tomás Pieroni</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Abrir o cerrar el menú" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Inicio</span></a>
@@ -141,11 +127,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#los-datos" id="toc-los-datos" class="nav-link" data-scroll-target="#los-datos">Los datos</a></li>
   <li><a href="#qué-hice-específicamente" id="toc-qué-hice-específicamente" class="nav-link" data-scroll-target="#qué-hice-específicamente">Qué hice específicamente</a></li>
   <li><a href="#hallazgos-principales" id="toc-hallazgos-principales" class="nav-link" data-scroll-target="#hallazgos-principales">Hallazgos principales</a></li>
+  <li><a href="#redes-semánticas" id="toc-redes-semánticas" class="nav-link" data-scroll-target="#redes-semánticas">Redes semánticas</a></li>
   <li><a href="#decisión-metodológica-principal" id="toc-decisión-metodológica-principal" class="nav-link" data-scroll-target="#decisión-metodológica-principal">Decisión metodológica principal</a></li>
   <li><a href="#resultado" id="toc-resultado" class="nav-link" data-scroll-target="#resultado">Resultado</a></li>
   <li><a href="#limitaciones" id="toc-limitaciones" class="nav-link" data-scroll-target="#limitaciones">Limitaciones</a></li>
   <li><a href="#habilidades-demostradas" id="toc-habilidades-demostradas" class="nav-link" data-scroll-target="#habilidades-demostradas">Habilidades demostradas</a></li>
-  <li><a href="#tecnologías" id="toc-tecnologías" class="nav-link" data-scroll-target="#tecnologías">Tecnologías</a></li>
   </ul>
 </nav>
     </div>
@@ -177,78 +163,127 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Proyecto de Análisis de Textos y Redes Sociales · Universidad de Granada · 2026</strong></p>
-<p><code>NLP multilingüe</code> <code>LDA</code> <code>Gensim</code> <code>AFINN</code> <code>Redes semánticas</code></p>
+<div class="case-meta">
+<p>ANÁLISIS DE TEXTOS Y REDES SOCIALES · MÁSTER DASOC · UNIVERSIDAD DE GRANADA · FEBRERO 2026</p>
+<p><span class="tag">Python</span> <span class="tag">NLTK</span> <span class="tag">Gensim</span> <span class="tag">AFINN</span> <span class="tag">NetworkX</span> <span class="tag">langdetect</span></p>
+</div>
 <section id="resumen-ejecutivo" class="level2">
-<h2 class="anchored" data-anchor-id="resumen-ejecutivo">Resumen ejecutivo</h2>
-<p>El proyecto analiza cómo se discute la inteligencia artificial generativa en YouTube cuando el contenido está en español y cuando está en inglés. El corpus reúne 6.804 comentarios extraídos de tres videos con enfoques distintos (pesimista, neutro y optimista), procesados con técnicas de minería de texto y análisis de redes sociales.</p>
+<h2 data-anchor-id="resumen-ejecutivo">Resumen ejecutivo</h2>
+<p><span class="lede">El proyecto analiza cómo se discute la inteligencia artificial generativa en YouTube cuando la conversación ocurre en español y cuando ocurre en inglés. El corpus reúne 6.804 comentarios de tres videos con enfoques distintos (pesimista, neutro y optimista), procesados con minería de texto y análisis de redes.</span></p>
 </section>
 <section id="el-problema" class="level2">
-<h2 class="anchored" data-anchor-id="el-problema">El problema</h2>
-<p>La irrupción de modelos de IA generativa transformó un debate técnico en un fenómeno social amplio. El proyecto busca identificar si el discurso público se estructura de forma homogénea o si emergen comunidades discursivas diferenciadas según el idioma y el tipo de contenido.</p>
+<h2 data-anchor-id="el-problema">El problema</h2>
+<p>La irrupción de los modelos de IA generativa convirtió un debate técnico en un fenómeno social amplio, atravesado por tensiones laborales, culturales y morales. El proyecto busca identificar si el discurso público es homogéneo o si emergen comunidades discursivas diferenciadas según el idioma y el tipo de contenido.</p>
 </section>
 <section id="los-datos" class="level2">
-<h2 class="anchored" data-anchor-id="los-datos">Los datos</h2>
+<h2 data-anchor-id="los-datos">Los datos</h2>
 <ul>
-<li><strong>6.804 comentarios</strong> de YouTube.</li>
-<li><strong>3 videos</strong> con enfoques distintos (pesimista, neutro, optimista).</li>
-<li><strong>Dos idiomas</strong>: español e inglés.</li>
-<li>Variables: texto, cantidad de likes, video de origen, idioma detectado.</li>
+<li>6.804 comentarios de YouTube.</li>
+<li>Tres videos con enfoques distintos: pesimista, neutro y optimista.</li>
+<li>Dos idiomas: español e inglés.</li>
+<li>Variables: texto, cantidad de likes, video de origen e idioma detectado.</li>
 </ul>
 </section>
 <section id="qué-hice-específicamente" class="level2">
-<h2 class="anchored" data-anchor-id="qué-hice-específicamente">Qué hice específicamente</h2>
+<h2 data-anchor-id="qué-hice-específicamente">Qué hice específicamente</h2>
 <ol type="1">
-<li>Preprocesamiento textual: minúsculas, limpieza de puntuación y caracteres especiales, normalización de acentos, tokenización y eliminación de stopwords específicas por idioma.</li>
-<li>Detección automática de idioma con <code>langdetect</code>.</li>
-<li>Análisis de sentimiento léxico con el diccionario AFINN (versiones en español e inglés).</li>
-<li>Modelado de tópicos con LDA usando Gensim, entrenando modelos separados por idioma.</li>
-<li>Construcción de redes semánticas de coocurrencia con métricas de centralidad y detección de comunidades.</li>
+<li>Preprocesamiento textual: minúsculas, limpieza de puntuación y caracteres especiales, normalización de acentos, tokenización y stopwords específicas por idioma.</li>
+<li>Detección automática de idioma con langdetect.</li>
+<li>Sentimiento léxico con el diccionario AFINN, en sus versiones en español e inglés.</li>
+<li>Modelado de tópicos con LDA en Gensim, con modelos separados por idioma.</li>
+<li>Redes semánticas de coocurrencia con métricas de centralidad y detección de comunidades.</li>
 </ol>
 </section>
 <section id="hallazgos-principales" class="level2">
-<h2 class="anchored" data-anchor-id="hallazgos-principales">Hallazgos principales</h2>
+<h2 data-anchor-id="hallazgos-principales">Hallazgos principales</h2>
 <ul>
-<li><strong>En español</strong>, el debate gira en torno al <strong>empleo</strong>, la <strong>adaptación profesional</strong> y la <strong>programación</strong>: términos como <em>programar</em>, <em>aprender</em> y <em>futuro</em> dominan los tópicos.</li>
-<li><strong>En inglés</strong>, aparecen con mayor fuerza marcos <strong>existenciales</strong> y <strong>teológicos</strong>: <em>dios</em>, <em>simulación</em>, <em>humanos</em> y <em>control</em>.</li>
-<li>El discurso pesimista es más intenso emocionalmente y utiliza un vocabulario más bélico.</li>
-<li>La red semántica del video optimista es más dispersa: el optimismo se expresa en términos abstractos.</li>
+<li><strong>En español</strong>, el debate gira en torno al empleo, la adaptación profesional y la programación: <em>programar</em>, <em>aprender</em> y <em>futuro</em> dominan los tópicos.</li>
+<li><strong>En inglés</strong> aparecen con más fuerza marcos existenciales y teológicos: <em>god</em>, <em>simulation</em>, <em>humans</em> y <em>control</em>.</li>
+<li>El discurso pesimista es más intenso emocionalmente y usa un vocabulario más bélico.</li>
+<li>La red del video optimista es más dispersa: el optimismo se expresa en términos abstractos.</li>
 </ul>
+<div class="grid">
+<div class="g-col-12 g-col-md-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/ia-youtube/nube-palabras-espanol.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Comentarios en español."><img src="../images/ia-youtube/nube-palabras-espanol.webp" class="figure-light img-fluid figure-img" alt="Nube de palabras de los comentarios en español, dominada por humano, programar, futuro, puede y mundo."></a></p>
+<figcaption>Comentarios en español.</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/ia-youtube/nube-palabras-ingles.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Comentarios en inglés."><img src="../images/ia-youtube/nube-palabras-ingles.webp" class="figure-light img-fluid figure-img" alt="Nube de palabras de los comentarios en inglés, dominada por human, AI, robot, job, work, world y god."></a></p>
+<figcaption>Comentarios en inglés.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/ia-youtube/sentimiento-por-video.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Distribución del sentimiento léxico (AFINN) por video de origen. El video pesimista concentra la mayor parte del corpus."><img src="../images/ia-youtube/sentimiento-por-video.webp" class="figure-light img-fluid figure-img" alt="Gráfico de barras con el número de comentarios positivos, neutros y negativos por video: el video pesimista reúne cerca de 1.450 positivos, 1.900 neutros y 1.630 negativos, mientras que los videos neutro y optimista tienen menos de 500 comentarios por categoría."></a></p>
+<figcaption>Distribución del sentimiento léxico (AFINN) por video de origen. El video pesimista concentra la mayor parte del corpus.</figcaption>
+</figure>
+</div>
+</section>
+<section id="redes-semánticas" class="level2">
+<h2 data-anchor-id="redes-semánticas">Redes semánticas</h2>
+<p>Cada red muestra los términos que aparecen juntos en los comentarios de un mismo video; el tamaño del nodo refleja su centralidad.</p>
+<div class="grid">
+<div class="g-col-12 g-col-md-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/ia-youtube/red-semantica-pesimista.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Video pesimista."><img src="../images/ia-youtube/red-semantica-pesimista.webp" class="figure-light img-fluid figure-img" alt="Red semántica del video pesimista con nodos como humano, vida, dios, control, poder, trabajo y dinero."></a></p>
+<figcaption>Video pesimista.</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/ia-youtube/red-semantica-neutro.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Video neutro."><img src="../images/ia-youtube/red-semantica-neutro.webp" class="figure-light img-fluid figure-img" alt="Red semántica del video neutro, densa, con nodos como programador, código, software, aprender, trabajo y tecnología."></a></p>
+<figcaption>Video neutro.</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/ia-youtube/red-semantica-optimista.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Video optimista."><img src="../images/ia-youtube/red-semantica-optimista.webp" class="figure-light img-fluid figure-img" alt="Red semántica del video optimista, más dispersa, con nodos como humano, humanidad, vida, universo y tecnología."></a></p>
+<figcaption>Video optimista.</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="decisión-metodológica-principal" class="level2">
-<h2 class="anchored" data-anchor-id="decisión-metodológica-principal">Decisión metodológica principal</h2>
-<p>Implementar todo el pipeline en Python (en lugar de herramientas gráficas como Gephi) para garantizar <strong>trazabilidad, reproducibilidad e integración</strong> en un único flujo de trabajo.</p>
+<h2 data-anchor-id="decisión-metodológica-principal">Decisión metodológica principal</h2>
+<p>Implementar todo el pipeline en Python, en lugar de usar herramientas gráficas como Gephi, para garantizar trazabilidad, reproducibilidad e integración en un único flujo de trabajo.</p>
 </section>
 <section id="resultado" class="level2">
-<h2 class="anchored" data-anchor-id="resultado">Resultado</h2>
-<p>Un análisis tridimensional que articula <strong>emoción, tema y estructura</strong> del discurso, documentado con código reproducible y visualizaciones que permiten comparar los corpus.</p>
+<h2 data-anchor-id="resultado">Resultado</h2>
+<p>Un análisis que articula emoción, tema y estructura del discurso, documentado con código reproducible y visualizaciones que permiten comparar los corpus.</p>
 </section>
 <section id="limitaciones" class="level2">
-<h2 class="anchored" data-anchor-id="limitaciones">Limitaciones</h2>
+<h2 data-anchor-id="limitaciones">Limitaciones</h2>
 <ul>
-<li><strong>Ironía y sarcasmo</strong> no detectados correctamente por el análisis léxico.</li>
-<li><strong>Sesgo de selección</strong>: los videos fueron elegidos por su contenido controversial.</li>
-<li><strong>Desbalance del corpus</strong>: un video concentra la mayoría de los comentarios.</li>
-<li><strong>API de YouTube</strong>: no recupera comentarios eliminados o marcados como spam.</li>
-<li><strong>Comparación entre corpus</strong>: los temas no son directamente equiparables entre idiomas.</li>
-<li><strong>Interpretación de tópicos</strong>: los modelos LDA requieren revisión humana.</li>
+<li>El análisis léxico no detecta correctamente la ironía ni el sarcasmo.</li>
+<li>Sesgo de selección: los videos se eligieron por su contenido controvertido.</li>
+<li>Desbalance del corpus: un video concentra la mayoría de los comentarios.</li>
+<li>La API de YouTube no recupera comentarios eliminados o marcados como spam.</li>
+<li>Los tópicos no son directamente equiparables entre idiomas y requieren revisión humana.</li>
 </ul>
 </section>
 <section id="habilidades-demostradas" class="level2">
-<h2 class="anchored" data-anchor-id="habilidades-demostradas">Habilidades demostradas</h2>
+<h2 data-anchor-id="habilidades-demostradas">Habilidades demostradas</h2>
 <ul>
 <li>Procesamiento de texto multilingüe.</li>
 <li>Análisis de sentimiento y modelado de tópicos.</li>
-<li>Construcción de redes semánticas y detección de comunidades.</li>
-<li>Integración de técnicas NLP en un pipeline reproducible.</li>
+<li>Redes semánticas y detección de comunidades.</li>
+<li>Integración de técnicas de NLP en un pipeline reproducible.</li>
 </ul>
-</section>
-<section id="tecnologías" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologías">Tecnologías</h2>
-<p><code>Python</code> · <code>NLTK</code> · <code>Gensim</code> · <code>AFINN</code> · <code>NetworkX</code> · <code>langdetect</code> · <code>Jupyter</code></p>
-<hr>
-<p><em>Página completa en preparación.</em></p>
-<p><a href="../proyectos.html" class="btn btn-outline-primary">← Volver a Proyectos</a></p>
+<div class="back-link"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a></div>
 
 
 </section>
@@ -256,13 +291,6 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -341,6 +369,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -655,6 +688,67 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><strong>Tomás Nelio Pieroni</strong> · Data Analyst<br> Granada, España · Ciudadano UE · © 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/in/tomas-pieroni/">
+<p>LinkedIn</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/tomaspieroni-cloud">
+<p>GitHub</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:tomaspieroni@gmail.com">
+<p>tomaspieroni@gmail.com</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
