@@ -284,21 +284,7 @@
     "href": "proyectos/sistema-demografico-montilla.html#resumen-ejecutivo",
     "title": "Sistema de Análisis Demográfico Municipal",
     "section": "Resumen ejecutivo",
-    "text": "Resumen ejecutivo\nUna solución de datos de extremo a extremo para integrar fuentes demográficas dispersas y facilitar su análisis por parte de usuarios municipales. Desarrollé procesos ETL en R desde APIs públicas del INE y del IECA, diseñé una base relacional en PostgreSQL y desplegué PostgreSQL y Shiny Server mediante Docker sobre Ubuntu. La solución incluyó un dashboard interactivo, diccionario de datos, documentación técnica y manual de usuario."
-  },
-  {
-    "objectID": "proyectos/sistema-demografico-montilla.html#el-problema",
-    "href": "proyectos/sistema-demografico-montilla.html#el-problema",
-    "title": "Sistema de Análisis Demográfico Municipal",
-    "section": "El problema",
-    "text": "El problema\nEl Ayuntamiento de Montilla trabaja con información procedente de varias fuentes estadísticas oficiales (INE, IECA y SEPE) que históricamente estaban dispersas y sin integrar. La planificación de servicios sociales, la atención a las personas mayores y las políticas de atracción de población joven necesitaban evidencia sistematizada y actualizable."
-  },
-  {
-    "objectID": "proyectos/sistema-demografico-montilla.html#los-datos",
-    "href": "proyectos/sistema-demografico-montilla.html#los-datos",
-    "title": "Sistema de Análisis Demográfico Municipal",
-    "section": "Los datos",
-    "text": "Los datos\nEl sistema integra series históricas de población, estructura por edades, envejecimiento, dependencia, crecimiento natural, migraciones y paro registrado, obtenidas de APIs públicas del INE y del IECA y de portales de datos abiertos."
+    "text": "Resumen ejecutivo\nEl Ayuntamiento de Montilla trabajaba con datos demográficos del INE, el IECA y el SEPE dispersos y sin integrar. Construí un sistema que los reúne en una base PostgreSQL alimentada por procesos ETL en R y los pone a disposición del equipo municipal en un dashboard en Shiny y un panel en Apache Superset con 18 visualizaciones. Todo se despliega con Docker sobre Ubuntu y funciona con software de código abierto, sin coste de licencias."
   },
   {
     "objectID": "proyectos/sistema-demografico-montilla.html#arquitectura",
@@ -308,45 +294,38 @@
     "text": "Arquitectura\n\n\n\nTodo el sistema se orquesta con Docker Compose, lo que garantiza la portabilidad y la reproducibilidad del entorno completo."
   },
   {
-    "objectID": "proyectos/sistema-demografico-montilla.html#qué-hice-específicamente",
-    "href": "proyectos/sistema-demografico-montilla.html#qué-hice-específicamente",
+    "objectID": "proyectos/sistema-demografico-montilla.html#qué-hice",
+    "href": "proyectos/sistema-demografico-montilla.html#qué-hice",
     "title": "Sistema de Análisis Demográfico Municipal",
-    "section": "Qué hice específicamente",
-    "text": "Qué hice específicamente\nDiseñé e implementé la totalidad del proyecto:\n\nExtracción y transformación con procesos ETL en R desde APIs públicas.\nDiseño del modelo relacional en PostgreSQL.\nDespliegue de PostgreSQL y Shiny Server en contenedores Docker sobre Ubuntu.\nDesarrollo del dashboard interactivo en Shiny.\nExploración de Apache Superset como entorno alternativo de consulta.\nDiccionario de datos, documentación técnica, manual de usuario y presentación ejecutiva."
+    "section": "Qué hice",
+    "text": "Qué hice\n\nProcesos ETL en R desde las APIs públicas del INE y del IECA.\nModelo relacional en PostgreSQL.\nDashboard interactivo en Shiny y panel de indicadores en Apache Superset.\nDespliegue de todo el entorno con Docker Compose sobre Ubuntu.\nDiccionario de datos, documentación técnica, manual de usuario y presentación ejecutiva."
   },
   {
     "objectID": "proyectos/sistema-demografico-montilla.html#el-dashboard",
     "href": "proyectos/sistema-demografico-montilla.html#el-dashboard",
     "title": "Sistema de Análisis Demográfico Municipal",
     "section": "El dashboard",
-    "text": "El dashboard\n\n\n\nPestaña de atracción de población del dashboard en Shiny entregado. El usuario elige la fuente de cada serie; la línea discontinua marca 2021, el año de solapamiento entre fuentes. Fuente: INE (Padrón y Censo) e IECA. Periodo: 2003–2024. Datos consultados durante el desarrollo, marzo–junio de 2026."
+    "text": "El dashboard\n\n\n\nPestaña de atracción de población del dashboard en Shiny. El usuario elige la fuente de cada serie; la línea discontinua marca 2021, el año de solapamiento entre fuentes. Fuente: INE (Padrón y Censo) e IECA, 2003–2024."
+  },
+  {
+    "objectID": "proyectos/sistema-demografico-montilla.html#lo-que-muestran-los-datos",
+    "href": "proyectos/sistema-demografico-montilla.html#lo-que-muestran-los-datos",
+    "title": "Sistema de Análisis Demográfico Municipal",
+    "section": "Lo que muestran los datos",
+    "text": "Lo que muestran los datos\nMontilla alcanzó su máximo de población en 2010, con 23.907 habitantes, y desde entonces ha perdido más de 1.700, hasta los 22.192 de 2025.\n\n\n\nPoblación total, 2003–2025. Fuente: INE. Panel en Apache Superset.\n\n\nLa edad media subió casi siete años, de 38,8 en 2001 a 45,5 en 2025, con las mujeres unos dos años por encima de los hombres.\n\n\n\nEdad media total y por sexo, 1999–2025. Fuentes: IECA e INE. Panel en Apache Superset.\n\n\nLos nacimientos se redujeron a la mitad entre 2006 y 2024, de 241 a 120, y desde 2011 las defunciones los superan todos los años.\n\n\n\nNacimientos y defunciones, 2006–2024. Fuente: IECA. Panel en Apache Superset."
   },
   {
     "objectID": "proyectos/sistema-demografico-montilla.html#decisión-metodológica-principal",
     "href": "proyectos/sistema-demografico-montilla.html#decisión-metodológica-principal",
     "title": "Sistema de Análisis Demográfico Municipal",
     "section": "Decisión metodológica principal",
-    "text": "Decisión metodológica principal\nLa decisión más importante fue no ocultar las discrepancias entre fuentes. Cuando el INE y el IECA ofrecen series con criterios distintos, el sistema las muestra por separado y documenta la diferencia, en lugar de imponer una reconciliación que perdería información sobre cómo se produce cada estadística.\n\n\n\nVista de exploración en Apache Superset. La discontinuidad de 2021 en el saldo migratorio coincide con el cambio de fuente y con diferencias metodológicas entre las series. Fuentes: INE e IECA (saldo migratorio, 2003–2024) y SEPE (paro registrado, 2009–2025). Datos consultados durante el desarrollo, marzo–junio de 2026."
-  },
-  {
-    "objectID": "proyectos/sistema-demografico-montilla.html#resultado",
-    "href": "proyectos/sistema-demografico-montilla.html#resultado",
-    "title": "Sistema de Análisis Demográfico Municipal",
-    "section": "Resultado",
-    "text": "Resultado\nUn sistema reproducible que cubre extracción, transformación, almacenamiento, análisis, visualización, despliegue y documentación, entregado a la entidad con manual de usuario y diccionario de datos."
+    "text": "Decisión metodológica principal\nLa decisión más importante fue no ocultar las discrepancias entre fuentes. En 2021 el INE pasó a un censo continuo basado en registros administrativos, y desde entonces sus cifras no coinciden del todo con las del IECA, basadas en el padrón. En 2021, por ejemplo, el índice de dependencia era de 53,1 según el IECA y de 51,2 según el INE. En lugar de imponer una reconciliación, el sistema muestra ambas series y documenta el origen de la diferencia.\n\n\n\n\n\nÍndice de dependencia según el IECA y el INE, 2020–2025. En los años en que coinciden, el IECA queda casi dos puntos por encima.\n\n\n\n\n\n\n\nTasa de saldo migratorio según el IECA (2003–2021) y el INE (2021–2024). La discontinuidad de 2021 coincide con el cambio de fuente."
   },
   {
     "objectID": "proyectos/sistema-demografico-montilla.html#limitaciones",
     "href": "proyectos/sistema-demografico-montilla.html#limitaciones",
     "title": "Sistema de Análisis Demográfico Municipal",
     "section": "Limitaciones",
-    "text": "Limitaciones\n\nLa cobertura temporal depende de la disponibilidad de cada serie en las fuentes originales.\nAlgunas series requieren controles manuales de consistencia entre fuentes.\nEl sistema está pensado para un municipio; extenderlo a otros exige revisar las correspondencias geográficas."
-  },
-  {
-    "objectID": "proyectos/sistema-demografico-montilla.html#habilidades-demostradas",
-    "href": "proyectos/sistema-demografico-montilla.html#habilidades-demostradas",
-    "title": "Sistema de Análisis Demográfico Municipal",
-    "section": "Habilidades demostradas",
-    "text": "Habilidades demostradas\n\nIntegración de fuentes, ETL, modelado relacional, despliegue y visualización de datos.\nAplicaciones Shiny con lógica reactiva.\nOrquestación de contenedores con Docker Compose.\nDocumentación técnica y comunicación con usuarios no técnicos.\n\nVolver a ProyectosVer código en GitHub"
+    "text": "Limitaciones\n\nLa cobertura temporal depende de la disponibilidad de cada serie en las fuentes originales.\nEl sistema está pensado para un municipio; extenderlo a otros exige revisar las correspondencias geográficas.\n\nVolver a ProyectosVer código en GitHub"
   }
 ]
