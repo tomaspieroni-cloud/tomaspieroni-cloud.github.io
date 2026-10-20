@@ -2,7 +2,7 @@
 title: "Sistema de Análisis Demográfico Municipal"
 subtitle: "Integración de fuentes, ETL, modelado relacional, despliegue y visualización de datos para el Ayuntamiento de Montilla"
 pagetitle: "Sistema demográfico de Montilla · Tomás Pieroni"
-description: "ETL en R, PostgreSQL, Docker y un dashboard interactivo en Shiny para apoyar el análisis demográfico del Ayuntamiento de Montilla."
+description: "ETL en R, PostgreSQL, Docker, un dashboard en Shiny y un panel en Apache Superset para apoyar el análisis demográfico del Ayuntamiento de Montilla."
 toc: true
 toc-title: "Contenido"
 ---
@@ -17,57 +17,55 @@ INTEGRACIÓN Y VISUALIZACIÓN DE DATOS · PRÁCTICAS CURRICULARES · UNIVERSIDAD
 
 ## Resumen ejecutivo
 
-[Una solución de datos de extremo a extremo para integrar fuentes demográficas dispersas y facilitar su análisis por parte de usuarios municipales. Desarrollé procesos ETL en R desde APIs públicas del INE y del IECA, diseñé una base relacional en PostgreSQL y desplegué PostgreSQL y Shiny Server mediante Docker sobre Ubuntu. La solución incluyó un dashboard interactivo, diccionario de datos, documentación técnica y manual de usuario.]{.lede}
-
-## El problema
-
-El Ayuntamiento de Montilla trabaja con información procedente de varias fuentes estadísticas oficiales (INE, IECA y SEPE) que históricamente estaban dispersas y sin integrar. La planificación de servicios sociales, la atención a las personas mayores y las políticas de atracción de población joven necesitaban evidencia sistematizada y actualizable.
-
-## Los datos
-
-El sistema integra series históricas de población, estructura por edades, envejecimiento, dependencia, crecimiento natural, migraciones y paro registrado, obtenidas de APIs públicas del INE y del IECA y de portales de datos abiertos.
+[El Ayuntamiento de Montilla trabajaba con datos demográficos del INE, el IECA y el SEPE dispersos y sin integrar. Construí un sistema que los reúne en una base PostgreSQL alimentada por procesos ETL en R y los pone a disposición del equipo municipal en un dashboard en Shiny y un panel en Apache Superset con 18 visualizaciones. Todo se despliega con Docker sobre Ubuntu y funciona con software de código abierto, sin coste de licencias.]{.lede}
 
 ## Arquitectura
 
 ![Todo el sistema se orquesta con Docker Compose, lo que garantiza la portabilidad y la reproducibilidad del entorno completo.](../images/montilla/arquitectura-sistema.svg){fig-alt="Diagrama de arquitectura: APIs públicas del INE, IECA y SEPE alimentan un proceso ETL en R que carga una base PostgreSQL; desde ella consultan un dashboard en Shiny y Apache Superset, dentro de un entorno Docker Compose sobre Ubuntu."}
 
-## Qué hice específicamente
+## Qué hice
 
-Diseñé e implementé la totalidad del proyecto:
-
-1. Extracción y transformación con procesos ETL en R desde APIs públicas.
-2. Diseño del modelo relacional en PostgreSQL.
-3. Despliegue de PostgreSQL y Shiny Server en contenedores Docker sobre Ubuntu.
-4. Desarrollo del dashboard interactivo en Shiny.
-5. Exploración de Apache Superset como entorno alternativo de consulta.
-6. Diccionario de datos, documentación técnica, manual de usuario y presentación ejecutiva.
+1. Procesos ETL en R desde las APIs públicas del INE y del IECA.
+2. Modelo relacional en PostgreSQL.
+3. Dashboard interactivo en Shiny y panel de indicadores en Apache Superset.
+4. Despliegue de todo el entorno con Docker Compose sobre Ubuntu.
+5. Diccionario de datos, documentación técnica, manual de usuario y presentación ejecutiva.
 
 ## El dashboard
 
-![Pestaña de atracción de población del dashboard en Shiny entregado. El usuario elige la fuente de cada serie; la línea discontinua marca 2021, el año de solapamiento entre fuentes. Fuente: INE (Padrón y Censo) e IECA. Periodo: 2003–2024. Datos consultados durante el desarrollo, marzo–junio de 2026.](../images/montilla/dashboard-shiny-atraccion.webp){.figure-light fig-alt="Captura del dashboard en Shiny con pestañas temáticas y dos gráficos: el porcentaje de población joven de 15 a 29 años, en descenso desde cerca del 21 % hasta algo más del 16 %, y el saldo migratorio anual en personas, con una línea vertical en 2021 que separa las fuentes IECA e INE."}
+![Pestaña de atracción de población del dashboard en Shiny. El usuario elige la fuente de cada serie; la línea discontinua marca 2021, el año de solapamiento entre fuentes. Fuente: INE (Padrón y Censo) e IECA, 2003–2024.](../images/montilla/dashboard-shiny-atraccion.webp){.figure-light fig-alt="Captura del dashboard en Shiny con pestañas temáticas y dos gráficos: el porcentaje de población joven de 15 a 29 años, en descenso desde cerca del 21 % hasta algo más del 16 %, y el saldo migratorio anual en personas, con una línea vertical en 2021 que separa las fuentes IECA e INE."}
+
+## Lo que muestran los datos
+
+Montilla alcanzó su máximo de población en 2010, con 23.907 habitantes, y desde entonces ha perdido más de 1.700, hasta los 22.192 de 2025.
+
+![Población total, 2003–2025. Fuente: INE. Panel en Apache Superset.](../images/montilla/evolucion-poblacion.webp){fig-alt="Gráfico de líneas de la población total de Montilla entre 2003 y 2025. La población crece hasta un máximo cercano a 23.900 habitantes en 2010 y desciende de forma continua hasta unos 22.200 en 2025."}
+
+La edad media subió casi siete años, de 38,8 en 2001 a 45,5 en 2025, con las mujeres unos dos años por encima de los hombres.
+
+![Edad media total y por sexo, 1999–2025. Fuentes: IECA e INE. Panel en Apache Superset.](../images/montilla/edad-media-por-sexo.webp){fig-alt="Gráfico de líneas de la edad media en Montilla entre 1999 y 2025, para el total, las mujeres y los hombres. Las tres series suben de forma continua. En 2025, la edad media es de unos 46,7 años en mujeres, 45,5 en el total y 44,3 en hombres."}
+
+Los nacimientos se redujeron a la mitad entre 2006 y 2024, de 241 a 120, y desde 2011 las defunciones los superan todos los años.
+
+![Nacimientos y defunciones, 2006–2024. Fuente: IECA. Panel en Apache Superset.](../images/montilla/nacimientos-vs-defunciones.webp){fig-alt="Gráfico de líneas de nacimientos y defunciones en Montilla entre 2006 y 2024. Ambas series parten de valores cercanos a 230. Desde 2011 las defunciones se mantienen por encima de 200 y los nacimientos descienden hasta 120 en 2024."}
 
 ## Decisión metodológica principal
 
-La decisión más importante fue **no ocultar las discrepancias entre fuentes**. Cuando el INE y el IECA ofrecen series con criterios distintos, el sistema las muestra por separado y documenta la diferencia, en lugar de imponer una reconciliación que perdería información sobre cómo se produce cada estadística.
+La decisión más importante fue **no ocultar las discrepancias entre fuentes**. En 2021 el INE pasó a un censo continuo basado en registros administrativos, y desde entonces sus cifras no coinciden del todo con las del IECA, basadas en el padrón. En 2021, por ejemplo, el índice de dependencia era de 53,1 según el IECA y de 51,2 según el INE. En lugar de imponer una reconciliación, el sistema muestra ambas series y documenta el origen de la diferencia.
 
-![Vista de exploración en Apache Superset. La discontinuidad de 2021 en el saldo migratorio coincide con el cambio de fuente y con diferencias metodológicas entre las series. Fuentes: INE e IECA (saldo migratorio, 2003–2024) y SEPE (paro registrado, 2009–2025). Datos consultados durante el desarrollo, marzo–junio de 2026.](../images/montilla/superset-migracion-paro.webp){fig-alt="Dos gráficos de Apache Superset sobre fondo oscuro: la tasa de saldo migratorio entre 2003 y 2024, con las series del INE y del IECA diferenciadas, y el paro registrado por sexo entre 2009 y 2025, con más mujeres que hombres en paro durante todo el periodo."}
-
-## Resultado
-
-Un sistema reproducible que cubre extracción, transformación, almacenamiento, análisis, visualización, despliegue y documentación, entregado a la entidad con manual de usuario y diccionario de datos.
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+![Índice de dependencia según el IECA y el INE, 2020–2025. En los años en que coinciden, el IECA queda casi dos puntos por encima.](../images/montilla/dependencia-ine-vs-ieca.webp){fig-alt="Gráfico de líneas del índice de dependencia de Montilla según dos fuentes. La serie del IECA, entre 2020 y 2022, se sitúa cerca de 53. La serie del INE, entre 2021 y 2025, parte de 51,2 y sube hasta 52,4."}
+:::
+::: {.g-col-12 .g-col-md-6}
+![Tasa de saldo migratorio según el IECA (2003–2021) y el INE (2021–2024). La discontinuidad de 2021 coincide con el cambio de fuente.](../images/montilla/superset-saldo-migratorio.webp){fig-alt="Gráfico de líneas de la tasa de saldo migratorio de Montilla. La serie del IECA va de 2003 a 2021, con valores positivos hasta 2009 y negativos después. La serie del INE empieza en 2021 en torno a −6 y sube hasta cerca de 5 en 2023."}
+:::
+:::
 
 ## Limitaciones
 
 - La cobertura temporal depende de la disponibilidad de cada serie en las fuentes originales.
-- Algunas series requieren controles manuales de consistencia entre fuentes.
 - El sistema está pensado para un municipio; extenderlo a otros exige revisar las correspondencias geográficas.
-
-## Habilidades demostradas
-
-- Integración de fuentes, ETL, modelado relacional, despliegue y visualización de datos.
-- Aplicaciones Shiny con lógica reactiva.
-- Orquestación de contenedores con Docker Compose.
-- Documentación técnica y comunicación con usuarios no técnicos.
 
 ```{=html}
 <div class="back-link btn-row"><a class="btn-tp btn-tp--secondary" href="../proyectos.html">Volver a Proyectos</a><a class="btn-tp btn-tp--ghost" href="https://github.com/tomaspieroni-cloud/sistema-demografico-montilla">Ver código en GitHub</a></div>
